@@ -108,7 +108,7 @@
 
         <h1 class="hero-title">Save Up to <em> 90% on Your Electricity Bills</em> with Nabhas Solar. Switch to Solar Today.</h1>
 
-        <p class="hero-subtitle">Join 400+ happy customers who reduced their electricity costs. Get subsidy benefits and recover your investment within 3–5 years—while contributing to a cleaner environment by reducing 5 tons of CO₂ every day</p>
+        <p class="hero-subtitle">Join 400+ happy customers who reduced their electricity costs. Get subsidy benefits and recover your investment within 3–5 years while contributing to a cleaner environment by reducing 5 tons of CO₂ every day</p>
 
 
 
