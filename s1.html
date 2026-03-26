@@ -1,0 +1,167 @@
+
+<style>
+    /* ── CUSTOM STYLING ────────────────────────────────────────── */
+    .new_index_service_section {
+        padding: 80px 0;
+        background-color: #ffffff;
+    }
+
+    .new_index_service_section .section-title {
+        font-family: 'Syne', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin-bottom: 50px;
+        color: #000;
+    }
+
+    /* Card Wrapper */
+    .new_index_service_section .service-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        height: 400px;
+        cursor: pointer;
+        border: none;
+        background: #000; /* Background color for contrast */
+        margin-bottom: 30px;
+        transition: transform 0.4s ease;
+    }
+
+    .new_index_service_section .service-card:hover {
+        transform: translateY(-10px);
+    }
+
+    /* Image Styling */
+    .new_index_service_section .image-box {
+        width: 100%;
+        height: 100%;
+        transition: 0.6s all ease-in-out;
+    }
+
+    .new_index_service_section .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.6s all ease-in-out;
+    }
+
+    /* Content Overlay (Transparent/Blur effect on hover) */
+    .new_index_service_section .content-box {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 30px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+        transition: all 0.5s ease-in-out;
+        text-align: center;
+        z-index: 2;
+    }
+
+    /* Initial Heading (Visible below or over image) */
+    .new_index_service_section .service-title {
+        font-family: 'Syne', sans-serif;
+        color: #fff;
+        font-size: 1.5rem;
+        margin: 0;
+        transition: all 0.5s ease;
+    }
+
+    .new_index_service_section .service-desc {
+        color: #ddd;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.95rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    /* HOVER STATE */
+    .new_index_service_section .service-card:hover .image-box img {
+        filter: grayscale(1) brightness(0.3) blur(2px);
+        transform: scale(1.1);
+    }
+
+    .new_index_service_section .service-card:hover .content-box {
+        background: rgba(255, 255, 255, 0.1); /* Subtle transparent white */
+        backdrop-filter: blur(4px); /* Modern Glass effect */
+        justify-content: center;
+    }
+
+    .new_index_service_section .service-card:hover .service-title {
+        transform: translateY(-10px);
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+    .new_index_service_section .service-card:hover .service-desc {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 100px;
+        margin-top: 15px;
+    }
+
+    /* Inner Border Decoration on Hover */
+    .new_index_service_section .service-card::after {
+        content: "";
+        position: absolute;
+        inset: 20px;
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: 10px;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: 1;
+    }
+
+    .new_index_service_section .service-card:hover::after {
+        opacity: 1;
+    }
+</style>
+
+<section class="new_index_service_section">
+    <div class="container">
+        <h2 class="text-center section-title">Our Specialized Services</h2>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="image-box">
+                        <img src="./assets/img/r-1.png" alt="Service Name">
+                    </div>
+                    <div class="content-box">
+                        <h3 class="service-title">Mohan Mani Kumar</h3>
+                        <p class="service-desc">Testing got laptop with advanced solar solutions and high-performance engineering.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="image-box">
+                        <img src="./assets/img/r-1.png" alt="Service Name">
+                    </div>
+                    <div class="content-box">
+                        <h3 class="service-title">Solar Installation</h3>
+                        <p class="service-desc">Providing sustainable energy for residential and commercial properties with expert care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="image-box">
+                        <img src="./assets/img/r-1.png" alt="Service Name">
+                    </div>
+                    <div class="content-box">
+                        <h3 class="service-title">System Maintenance</h3>
+                        <p class="service-desc">Keep your solar panels running at peak efficiency with our regular maintenance checks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

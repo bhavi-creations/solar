@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Free Quote – SolarEdge</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ── DESIGN TOKENS ───────────────────────────────────────────── */
+    :root {
+      /* We avoid using :root for brand colors per requirement */
+    }
+
+    /* ── BRAND COLOUR MAP (prefixed, not on :root) ───────────────── */
+    .free_quotes--amber {
+      color: #F59E0B;
+    }
+
+    .free_quotes--amber-bg {
+      background-color: #F59E0B;
+    }
+
+    /* ── GLOBAL ──────────────────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0D1117;
+      color: #E6EDF3;
+      min-height: 100vh;
+    }
+
+    /* ── NAVBAR ──────────────────────────────────────────────────── */
+    .free_quotes__navbar {
+      background: #0D1117;
+      border-bottom: 1px solid rgba(245, 158, 11, .18);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1050;
+      backdrop-filter: blur(12px);
+    }
+
+    .free_quotes__navbar .navbar-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #F59E0B;
+      letter-spacing: -0.5px;
+    }
+
+    .free_quotes__navbar .navbar-brand span {
+      color: #E6EDF3;
+    }
+
+    .free_quotes__navbar .nav-link {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      color: #8B949E;
+      font-size: 0.95rem;
+      padding: 0.45rem 1rem;
+      transition: color .2s;
+    }
+
+    .free_quotes__navbar .nav-link:hover {
+      color: #F59E0B;
+    }
+
+    .free_quotes__navbar .nav-link.free_quotes__nav-cta {
+      background: #F59E0B;
+      color: #0D1117;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 0.45rem 1.2rem;
+      margin-left: .5rem;
+      transition: background .2s, transform .15s;
+    }
+
+    .free_quotes__navbar .nav-link.free_quotes__nav-cta:hover {
+      background: #FBBF24;
+      color: #0D1117;
+      transform: translateY(-1px);
+    }
+
+    .free_quotes__navbar .navbar-toggler {
+      border-color: rgba(245, 158, 11, .4);
+    }
+
+    .free_quotes__navbar .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 158, 11, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* ── HERO STRIP ──────────────────────────────────────────────── */
+    .free_quotes__hero {
+      background: linear-gradient(135deg, #111827 0%, #0D1117 60%, #1a1200 100%);
+      padding: 5rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .free_quotes__hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(245, 158, 11, .08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .free_quotes__hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      background: rgba(245, 158, 11, .12);
+      border: 1px solid rgba(245, 158, 11, .3);
+      color: #F59E0B;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 100px;
+      margin-bottom: 1.4rem;
+    }
+
+    .free_quotes__hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      color: #E6EDF3;
+      letter-spacing: -1px;
+      margin-bottom: 1.1rem;
+    }
+
+    .free_quotes__hero h1 em {
+      font-style: normal;
+      color: #F59E0B;
+    }
+
+    .free_quotes__hero p {
+      color: #8B949E;
+      font-size: 1.05rem;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* ── TRUST PILLS ─────────────────────────────────────────────── */
+    .free_quotes__trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 2rem;
+    }
+
+    .free_quotes__trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .08);
+      color: #C9D1D9;
+      font-size: .82rem;
+      padding: .35rem .85rem;
+      border-radius: 6px;
+    }
+
+    .free_quotes__trust-pill i {
+      color: #F59E0B;
+      font-size: .85rem;
+    }
+
+    /* ── FORM CARD ───────────────────────────────────────────────── */
+    .free_quotes__card {
+      background: #161B22;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow:
+        0 0 0 1px rgba(245, 158, 11, .06),
+        0 24px 60px rgba(0, 0, 0, .5);
+    }
+
+    .free_quotes__card-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    .free_quotes__card-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #E6EDF3;
+      margin-bottom: .3rem;
+    }
+
+    .free_quotes__card-header p {
+      color: #8B949E;
+      font-size: .88rem;
+    }
+
+    /* ── FORM ELEMENTS ───────────────────────────────────────────── */
+    .free_quotes__form-group {
+      margin-bottom: 1.35rem;
+    }
+
+    .free_quotes__label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 500;
+      color: #8B949E;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: .5rem;
+    }
+
+    .free_quotes__label .free_quotes__required {
+      color: #F59E0B;
+      margin-left: 2px;
+    }
+
+    .free_quotes__label .free_quotes__optional {
+      color: #6E7681;
+      font-size: .72rem;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-left: 4px;
+    }
+
+    .free_quotes__input,
+    .free_quotes__select,
+    .free_quotes__textarea {
+      width: 100%;
+      background: #0D1117;
+      border: 1px solid rgba(255, 255, 255, .10);
+      color: #E6EDF3;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem;
+      padding: .72rem 1rem;
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .free_quotes__input::placeholder,
+    .free_quotes__textarea::placeholder {
+      color: #4A5568;
+    }
+
+    .free_quotes__input:focus,
+    .free_quotes__select:focus,
+    .free_quotes__textarea:focus {
+      border-color: #F59E0B;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, .15);
+    }
+
+    .free_quotes__input:hover,
+    .free_quotes__select:hover,
+    .free_quotes__textarea:hover {
+      border-color: rgba(255, 255, 255, .2);
+    }
+
+    /* Input with icon prefix */
+    .free_quotes__input-wrap {
+      position: relative;
+    }
+
+    .free_quotes__input-wrap .free_quotes__input {
+      padding-left: 2.6rem;
+    }
+
+    .free_quotes__input-icon {
+      position: absolute;
+      left: .9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #4A5568;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: color .2s;
+    }
+
+    .free_quotes__input-wrap:focus-within .free_quotes__input-icon {
+      color: #F59E0B;
+    }
+
+    /* ── RADIO-STYLE GRID (Electricity Bill) ─────────────────────── */
+    .free_quotes__radio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: .6rem;
+    }
+
+    .free_quotes__radio-grid input[type="radio"] {
+      display: none;
+    }
+
+    .free_quotes__radio-grid label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0D1117;
+      border: 1px solid rgba(255, 255, 255, .10);
+      color: #8B949E;
+      border-radius: 8px;
+      padding: .65rem .5rem;
+      font-size: .85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      transition: all .2s;
+      user-select: none;
+    }
+
+    .free_quotes__radio-grid input[type="radio"]:checked+label {
+      background: rgba(245, 158, 11, .12);
+      border-color: #F59E0B;
+      color: #F59E0B;
+    }
+
+    .free_quotes__radio-grid label:hover {
+      border-color: rgba(245, 158, 11, .4);
+      color: #C9D1D9;
+    }
+
+    /* OTHER INPUT CONTAINER */
+    #other_bill_container {
+      display: none;
+      margin-top: 1rem;
+      animation: free_quotes-slideDown 0.3s ease-out;
+    }
+
+    @keyframes free_quotes-slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ── PROPERTY TOGGLE ─────────────────────────────────────────── */
+    .free_quotes__prop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .6rem;
+    }
+
+    .free_quotes__prop-grid input[type="radio"] {
+      display: none;
+    }
+
+    .free_quotes__prop-grid label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .4rem;
+      background: #0D1117;
+      border: 1px solid rgba(255, 255, 255, .10);
+      color: #8B949E;
+      border-radius: 10px;
+      padding: 1rem .5rem .8rem;
+      font-size: .82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .2s;
+      text-align: center;
+    }
+
+    .free_quotes__prop-grid label i {
+      font-size: 1.5rem;
+      transition: color .2s;
+    }
+
+    .free_quotes__prop-grid input[type="radio"]:checked+label {
+      background: rgba(245, 158, 11, .12);
+      border-color: #F59E0B;
+      color: #F59E0B;
+    }
+
+    .free_quotes__prop-grid label:hover {
+      border-color: rgba(245, 158, 11, .4);
+    }
+
+    /* ── SUBMIT BUTTON ───────────────────────────────────────────── */
+    .free_quotes__submit {
+      width: 100%;
+      background: #F59E0B;
+      color: #0D1117;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: .02em;
+      border: none;
+      border-radius: 8px;
+      padding: .9rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      margin-top: .5rem;
+    }
+
+    .free_quotes__submit:hover {
+      background: #FBBF24;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, .3);
+    }
+
+    .free_quotes__submit:active {
+      transform: translateY(0);
+    }
+
+    /* ── STATS ROW ───────────────────────────────────────────────── */
+    .free_quotes__stats {
+      padding: 3rem 0;
+      background: #0D1117;
+      border-top: 1px solid rgba(255, 255, 255, .05);
+      border-bottom: 1px solid rgba(255, 255, 255, .05);
+    }
+
+    .free_quotes__stat {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .free_quotes__stat-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #F59E0B;
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+
+    .free_quotes__stat-label {
+      font-size: .82rem;
+      color: #8B949E;
+    }
+
+    /* ── SUCCESS OVERLAY ─────────────────────────────────────────── */
+    .free_quotes__success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .free_quotes__success-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(245, 158, 11, .15);
+      border: 2px solid #F59E0B;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #F59E0B;
+      margin-bottom: 1.4rem;
+      animation: free_quotes-pop .4s cubic-bezier(.175, .885, .32, 1.275);
+    }
+
+    .free_quotes__success h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #E6EDF3;
+      margin-bottom: .6rem;
+    }
+
+    .free_quotes__success p {
+      color: #8B949E;
+      font-size: .95rem;
+      max-width: 300px;
+    }
+
+    @keyframes free_quotes-pop {
+      0% {
+        transform: scale(.5);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* ── VALIDATION ──────────────────────────────────────────────── */
+    .free_quotes__input.is-invalid,
+    .free_quotes__textarea.is-invalid {
+      border-color: #F87171;
+      box-shadow: 0 0 0 3px rgba(248, 113, 113, .12);
+    }
+
+    .free_quotes__error-msg {
+      color: #F87171;
+      font-size: .78rem;
+      margin-top: .35rem;
+      display: none;
+    }
+
+    .free_quotes__error-msg.show {
+      display: block;
+    }
+
+    .free_quotes__radio-error {
+      color: #F87171;
+      font-size: .78rem;
+      margin-top: .35rem;
+      display: none;
+    }
+
+    .free_quotes__radio-error.show {
+      display: block;
+    }
+
+    /* ── FOOTER STRIP ────────────────────────────────────────────── */
+    .free_quotes__footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: #6E7681;
+      font-size: .82rem;
+      border-top: 1px solid rgba(255, 255, 255, .05);
+    }
+
+    .free_quotes__footer a {
+      color: #F59E0B;
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────────── */
+    @media (max-width: 575px) {
+      .free_quotes__hero {
+        padding: 3rem 0 2.5rem;
+      }
+
+      .free_quotes__card {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .free_quotes__prop-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .free_quotes__radio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="free_quotes__navbar navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-sun-fill me-1"></i>Solar<span>Edge</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fqNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="fqNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+          <li class="nav-item">
+            <a class="nav-link free_quotes__nav-cta" href="#free-quote-form">
+              <i class="bi bi-lightning-charge-fill me-1"></i>Get a Free Quote
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="free_quotes__hero">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <div class="free_quotes__hero-badge">
+            <i class="bi bi-patch-check-fill"></i> 100% Free · No Obligation
+          </div>
+          <h1>Get Your <em>Solar Quote</em><br>in Minutes</h1>
+          <p>Tell us a little about your property and energy usage. Our experts will craft a custom solar plan tailored
+            to your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="free-quote-form" style="padding: 5rem 0; background: #0D1117;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-10">
+          <div class="free_quotes__card">
+            <div class="free_quotes__card-header">
+              <h2><i class="bi bi-lightning-charge-fill me-2" style="color:#F59E0B;"></i>Request Your Free Quote</h2>
+              <p>Fill in the details below and we'll get back to you within 24 hours.</p>
+            </div>
+
+            <form id="freeQuoteForm" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="free_quotes__form-group">
+                    <label class="free_quotes__label" for="fq_name">Full Name <span
+                        class="free_quotes__required">*</span></label>
+                    <div class="free_quotes__input-wrap">
+                      <i class="bi bi-person free_quotes__input-icon"></i>
+                      <input type="text" id="fq_name" class="free_quotes__input" placeholder="Rajesh Kumar" />
+                    </div>
+                    <div class="free_quotes__error-msg" id="err_name">Please enter your full name.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="free_quotes__form-group">
+                    <label class="free_quotes__label" for="fq_mobile">Mobile Number <span
+                        class="free_quotes__required">*</span></label>
+                    <div class="free_quotes__input-wrap">
+                      <i class="bi bi-telephone free_quotes__input-icon"></i>
+                      <input type="tel" id="fq_mobile" class="free_quotes__input" placeholder="98765 43210" />
+                    </div>
+                    <div class="free_quotes__error-msg" id="err_mobile">Please enter a valid mobile number.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="free_quotes__form-group">
+                <label class="free_quotes__label" for="fq_location">Location <span
+                    class="free_quotes__required">*</span></label>
+                <div class="free_quotes__input-wrap">
+                  <i class="bi bi-geo-alt free_quotes__input-icon"></i>
+                  <input type="text" id="fq_location" class="free_quotes__input" placeholder="e.g. Hyderabad" />
+                </div>
+                <div class="free_quotes__error-msg" id="err_location">Please enter your city.</div>
+              </div>
+
+              <div class="free_quotes__form-group">
+                <label class="free_quotes__label">Monthly Electricity Bill <span
+                    class="free_quotes__required">*</span></label>
+                <div class="free_quotes__radio-grid">
+                  <input type="radio" name="bill" id="bill_1" value="<2000" /><label for="bill_1">₹ < 2,000</label>
+                      <input type="radio" name="bill" id="bill_2" value="2000-5000" /><label for="bill_2">₹ 2,000 -
+                        5,000</label>
+                      <input type="radio" name="bill" id="bill_3" value=">5000" /><label for="bill_3">₹ > 5,000</label>
+                      <input type="radio" name="bill" id="bill_other" value="Other" /><label
+                        for="bill_other">Other</label>
+                </div>
+
+                <div id="other_bill_container">
+                  <div class="free_quotes__input-wrap">
+                    <i class="bi bi-currency-rupee free_quotes__input-icon"></i>
+                    <input type="number" id="fq_bill_other_val" class="free_quotes__input"
+                      placeholder="Enter amount manually" />
+                  </div>
+                  <div class="free_quotes__error-msg" id="err_bill_other">Please enter the bill amount.</div>
+                </div>
+
+                <div class="free_quotes__radio-error" id="err_bill">Please select your bill range.</div>
+              </div>
+
+              <div class="free_quotes__form-group">
+                <label class="free_quotes__label">Type of Property <span class="free_quotes__required">*</span></label>
+                <div class="free_quotes__prop-grid">
+                  <input type="radio" name="property" id="prop_residential" value="Residential" /><label
+                    for="prop_residential"><i class="bi bi-house-fill"></i>Residential</label>
+                  <input type="radio" name="property" id="prop_commercial" value="Commercial" /><label
+                    for="prop_commercial"><i class="bi bi-building"></i>Commercial</label>
+                  <input type="radio" name="property" id="prop_industrial" value="Industrial" /><label
+                    for="prop_industrial"><i class="bi bi-gear-wide-connected"></i>Industrial</label>
+                </div>
+                <div class="free_quotes__radio-error" id="err_property">Please select property type.</div>
+              </div>
+
+              <div class="free_quotes__form-group">
+                <label class="free_quotes__label" for="fq_message">Message (Optional)</label>
+                <div class="free_quotes__input-wrap">
+                  <i class="bi bi-chat-left-text free_quotes__input-icon" style="top: 15px;"></i>
+                  <textarea id="fq_message" class="free_quotes__input" rows="3"
+                    placeholder="Tell us more about your requirements..." style="padding-top: 10px;"></textarea>
+                </div>
+                <div class="free_quotes__error-msg" id="err_message">Please enter your message.</div>
+              </div>
+
+              <button type="submit" class="free_quotes__submit"><i class="bi bi-send-fill"></i>Submit My Free Quote
+                Request</button>
+            </form>
+
+            <div class="free_quotes__success" id="fqSuccess">
+              <div class="free_quotes__success-icon"><i class="bi bi-check-lg"></i></div>
+              <h3>Thank You!</h3>
+              <p>Your request has been received. Our expert will contact you within 24 hours.</p>
+              <button onclick="resetForm()"
+                style="margin-top:1.5rem; background:transparent; border:1px solid #F59E0B; color:#F59E0B; border-radius:8px; padding:.5rem 1rem;">Submit
+                Another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="free_quotes__footer">
+    <div class="container">
+      <p>© 2026 SolarEdge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const form = document.getElementById('freeQuoteForm');
+    const success = document.getElementById('fqSuccess');
+    const otherBillContainer = document.getElementById('other_bill_container');
+    const otherBillInput = document.getElementById('fq_bill_other_val');
+
+    /* Handle 'Other' visibility */
+    document.querySelectorAll('input[name="bill"]').forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        document.getElementById('err_bill').classList.remove('show');
+        if (e.target.value === 'Other') {
+          otherBillContainer.style.display = 'block';
+          otherBillInput.focus();
+        } else {
+          otherBillContainer.style.display = 'none';
+          otherBillInput.value = '';
+          document.getElementById('err_bill_other').classList.remove('show');
+        }
+      });
+    });
+
+    /* Live clear on input */
+    ['fq_name', 'fq_mobile', 'fq_location', 'fq_bill_other_val'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => {
+        const field = document.getElementById(id);
+        field.classList.remove('is-invalid');
+        if (id === 'fq_bill_other_val') document.getElementById('err_bill_other').classList.remove('show');
+        else document.getElementById('err_' + id.replace('fq_', '')).classList.remove('show');
+      });
+    });
+
+    document.querySelectorAll('input[name="property"]').forEach(r =>
+      r.addEventListener('change', () => document.getElementById('err_property').classList.remove('show'))
+    );
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+
+      if (!document.getElementById('fq_name').value.trim()) {
+        document.getElementById('fq_name').classList.add('is-invalid');
+        document.getElementById('err_name').classList.add('show'); valid = false;
+      }
+      if (document.getElementById('fq_mobile').value.replace(/\D/g, '').length < 10) {
+        document.getElementById('fq_mobile').classList.add('is-invalid');
+        document.getElementById('err_mobile').classList.add('show'); valid = false;
+      }
+      if (!document.getElementById('fq_location').value.trim()) {
+        document.getElementById('fq_location').classList.add('is-invalid');
+        document.getElementById('err_location').classList.add('show'); valid = false;
+      }
+
+      const billRadio = document.querySelector('input[name="bill"]:checked');
+      if (!billRadio) { document.getElementById('err_bill').classList.add('show'); valid = false; }
+      else if (billRadio.value === 'Other' && !otherBillInput.value.trim()) {
+        otherBillInput.classList.add('is-invalid');
+        document.getElementById('err_bill_other').classList.add('show');
+        valid = false;
+      }
+
+      if (!document.querySelector('input[name="property"]:checked')) { document.getElementById('err_property').classList.add('show'); valid = false; }
+
+      if (valid) {
+        form.style.display = 'none';
+        success.style.display = 'flex';
+      }
+    });
+
+    function resetForm() {
+      form.reset();
+      form.style.display = 'block';
+      success.style.display = 'none';
+      otherBillContainer.style.display = 'none';
+    }
+  </script>
+
+</body>
+
+</html>
