@@ -117,8 +117,7 @@
 
               <p class="text-muted mb-0">
 
-                project@nabhasconstuctions.com
-
+               nabhassolar@gmail.com
               </p>
 
             </div>

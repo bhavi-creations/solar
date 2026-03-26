@@ -496,7 +496,7 @@
                         <div class="nabhas_contact_icon"><i class="fas fa-envelope"></i></div>
                         <div class="nabhas_contact_text">
                             <strong>Email</strong>
-                            <span> project@nabhasconstuctions.com</span>
+                            <span> nabhassolar@gmail.com</span>
                         </div>
                     </li>
 

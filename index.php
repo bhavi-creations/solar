@@ -950,7 +950,7 @@
           <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
           <div>
             <div class="ci-label">Email</div>
-            <div class="ci-value">project@nabhasconstuctions.com</div>
+            <div class="ci-value">nabhassolar@gmail.com</div>
             <!-- <div style="font-size:.82rem;color:var(--gray);">We reply within 2 business hours</div> -->
           </div>
         </div>
