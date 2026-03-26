@@ -1401,9 +1401,9 @@ footer {
 }
 
 @media (max-width: 767.98px) {
-    section {
+    /* section {
         padding: 56px 0;
-    }
+    } */
 
     .contact-form-wrap {
         padding: 28px 20px;
@@ -4866,12 +4866,52 @@ overlay layer ni koncham transparency penchali */
 }
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .overlay_content h2 {
         font-size: 1.5rem;
     }
 
     .overlay_content p {
         font-size: 0.9rem;
+    }
+} */
+
+/* Text Content Styling - Width Reduced */
+.overlay_content {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    /* Content width ni inka tagginchanu */
+    max-width: 600px; 
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.overlay_content h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    /* Heading width ni inka focus cheyadaniki */
+    max-width: 500px;
+    margin: 0 auto 15px auto;
+}
+
+.overlay_content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    /* Paragraph width ni inka narrow ga ఉంచాను */
+    max-width: 450px; 
+    margin: 0 auto;
+}
+
+
+
+@media (max-width:768px) {
+    .index_over_all_page_styling {
+        padding: 10px;
     }
 }

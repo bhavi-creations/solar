@@ -5,6 +5,7 @@
 <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
 <?php include 'navbar.php'; ?>
 
+
 <!-- <div class="section team-area section-padding">
   <div class="container">
     <div class="team-wrapper">
@@ -136,7 +137,7 @@
           </video>
           <div class="video_overlay">
             <div class="overlay_content">
-              <h2>Power Your Future with Smart Solar Solutions</h2>
+              <h2>Power Your Future with <br> Smart Solar Solutions</h2>
               <p>Reduce electricity costs and switch to clean energy with reliable solar systems designed for homes, businesses, and industries.</p>
             </div>
           </div>
@@ -150,7 +151,7 @@
           </video>
           <div class="video_overlay">
             <div class="overlay_content">
-              <h2>Power Your Future with Smart Solar Solutions</h2>
+              <h2>Power Your Future with <br> Smart Solar Solutions</h2>
               <p>Reduce electricity costs and switch to clean energy with reliable solar systems designed for homes, businesses, and industries.</p>
             </div>
           </div>
@@ -162,7 +163,7 @@
   </div>
 </div>
 
-
+<div class="index_over_all_page_styling"></div>
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
 <section id="hero">
   <div class="hero-orb orb-1"></div>
@@ -319,10 +320,10 @@
             <img src="./assets/img/solar img (1).png" alt="" class="img-fluid d-block d-md-none">
           </div>
 
-          <div class="about-chip ac-2">
+          <!-- <div class="about-chip ac-2">
             <div class="ac-val">400+</div>
             <div class="ac-lbl">Homes Powered</div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -1148,7 +1149,7 @@
   </div>
 </section>
 
-
+</div>
 
 
 <script>
