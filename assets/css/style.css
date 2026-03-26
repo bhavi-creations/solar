@@ -462,7 +462,7 @@ img {
 }
 
 .hero-stat-num {
-   
+
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.4rem;
     font-weight: 800;
@@ -1906,7 +1906,7 @@ footer {
 
 .stat-strip {
     display: flex;
-    background: #ffffff; 
+    background: #ffffff;
     border-radius: 12px;
     margin-top: 32px;
     padding: 10px 0;
@@ -1919,14 +1919,16 @@ footer {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.stat-strip-item:last-child { border-right: none; }
+.stat-strip-item:last-child {
+    border-right: none;
+}
 
 .ss-num {
     font-family: 'Inter', sans-serif;
-    font-size: 3.2rem; 
+    font-size: 3.2rem;
     font-weight: 900;
     /* color: #ffffff; */
-    color:#0B1F3A;
+    color: #0B1F3A;
     line-height: 1;
     display: flex;
     align-items: center;
@@ -1949,7 +1951,7 @@ footer {
 .ss-lbl {
     font-size: 1rem;
     font-weight: 700;
-    color: #0B1F3A; 
+    color: #0B1F3A;
     margin-top: 8px;
 }
 
@@ -4734,7 +4736,8 @@ h5 {
 
 /* --- Toggle Bar Fix (The Hamburger) --- */
 .nabhas_solor_new_navbar_toggle {
-    display: none; /* Desktop lo hidden */
+    display: none;
+    /* Desktop lo hidden */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -4748,7 +4751,8 @@ h5 {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #000; /* Icon color Black */
+    background-color: #000;
+    /* Icon color Black */
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -4756,24 +4760,27 @@ h5 {
 /* --- Mobile View (992px and below) --- */
 @media (max-width: 992px) {
     .nabhas_solor_new_navbar_toggle {
-        display: flex; /* Mobile lo kanipisthadi */
+        display: flex;
+        /* Mobile lo kanipisthadi */
     }
 
     .nabhas_solor_new_navbar_menu {
         position: fixed;
         top: 0;
-        right: -100%; /* Initially hidden */
+        right: -100%;
+        /* Initially hidden */
         width: 280px;
         height: 100vh;
         background: #fff;
         z-index: 2000;
         transition: 0.4s cubic-bezier(0.1, 0.7, 0.6, 1);
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         padding: 40px 20px;
     }
 
     .nabhas_solor_new_navbar_menu.active {
-        right: 0; /* Menu open state */
+        right: 0;
+        /* Menu open state */
     }
 
     .nabhas_solor_new_navbar_menu ul {
@@ -4802,33 +4809,69 @@ h5 {
     }
 }
 
-
-
-.index_main_video_slider_section {
-    overflow: hidden;
-    background: #000; /* Video borders cover cheyadaniki black background */
-}
-
-.index_main_video_slider {
-    width: 100%;
-}
-
+/* Existing Styles unchi, ive add cheyandi */
 .index_main_video_slider_card {
+    position: relative;
+    /* Position relative is must for overlay */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.index_main_video_slider_card video {
+/* Color Layer / Overlay */
+.video_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-height: 90vh; /* Screen height kante ekkuva avvakunda */
-    display: block;
-    /* Video content motham kanipinchali ante 'contain' best */
-    object-fit: contain; 
+    height: 100%;
+    /* Video clarity ga undalante rgba alpha 0.3 or 0.4 unchandi */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    z-index: 1;
+    pointer-events: none;
+    /* Controls click avvadaniki idhi important */
 }
 
-/* Pagination Styling */
-.index_main_video_slider .swiper-pagination-bullet-active {
-    background: #1A7A4A; /* Your theme color */
+/* Text Content Styling */
+.overlay_content {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.overlay_content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.overlay_content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Controls visibility fix: If controls are needed, 
+overlay layer ni koncham transparency penchali */
+.index_main_video_slider_card video {
+    position: relative;
+    z-index: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .overlay_content h2 {
+        font-size: 1.5rem;
+    }
+
+    .overlay_content p {
+        font-size: 0.9rem;
+    }
 }

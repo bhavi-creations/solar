@@ -99,7 +99,7 @@
 </div> -->
 
 
-<div class="container-fluid index_main_video_slider_section p-0">
+<div class="container-fluid index_main_video_slider_section p-0 d-block d-md-none">
   <div class="swiper index_main_video_slider">
     <div class="swiper-wrapper">
 
@@ -124,7 +124,43 @@
     <div class="swiper-pagination"></div>
   </div>
 </div>
+<div class="container-fluid index_main_video_slider_section p-0 d-none d-md-block">
+  <div class="swiper index_main_video_slider">
+    <div class="swiper-wrapper">
 
+      <div class="swiper-slide">
+        <div class="index_main_video_slider_card">
+          <video muted playsinline controls preload="auto" class="w-100 h-auto">
+            <source src="./assets/img/nabhas_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video_overlay">
+            <div class="overlay_content">
+              <h2>Power Your Future with Smart Solar Solutions</h2>
+              <p>Reduce electricity costs and switch to clean energy with reliable solar systems designed for homes, businesses, and industries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="index_main_video_slider_card">
+          <video muted playsinline controls preload="auto" class="w-100 h-auto">
+            <source src="./assets/img/nabhas_1.mp4" type="video/mp4">
+          </video>
+          <div class="video_overlay">
+            <div class="overlay_content">
+              <h2>Power Your Future with Smart Solar Solutions</h2>
+              <p>Reduce electricity costs and switch to clean energy with reliable solar systems designed for homes, businesses, and industries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
 
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
@@ -167,15 +203,15 @@
         </div>
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-num"><span class="count-num" data-target="400">0</span>+</div>
+            <div class="hero-stat-num d-flex justify-content-center"><span class="count-num" data-target="400">0</span>+</div>
             <div class="hero-stat-lbl">Installations</div>
           </div>
           <div>
-            <div class="hero-stat-num"><span class="count-num" data-target="5">0</span>T</div>
+            <div class="hero-stat-num d-flex justify-content-center"><span class="count-num" data-target="5">0</span>T</div>
             <div class="hero-stat-lbl">CO₂ Reduced Daily</div>
           </div>
           <div>
-            <div class="hero-stat-num"><span class="count-num" data-target="300">0</span>+</div>
+            <div class="hero-stat-num d-flex justify-content-center"><span class="count-num" data-target="300">0</span>+</div>
             <div class="hero-stat-lbl">Happy Customers</div>
           </div>
         </div>
@@ -668,15 +704,15 @@
         <p style="color:rgba(0, 0, 0, 0.75);line-height:1.8;" class="mb-4">Going solar isn't just an investment in your home — it's an investment in your future and the planet's health. Join 400+ Residential & Commercial customers who have already switched to clean energy with Nabhas Solar.</p>
         <div class="d-flex gap-4 text-center">
           <div>
-            <div class="count-num" style="font-family:var(--font-head);font-size:2.2rem;font-weight:800;color:var(--sun);" data-target="90">0</div>
+            <div class="count-num" style="font-size:2.2rem;font-weight:800;color:var(--sun);" data-target="90">0</div>
             <div style="font-size:.8rem;color:rgba(0, 0, 0, 0.65);">% Avg Bill Reduction</div>
           </div>
           <div>
-            <div class="count-num" style="font-family:var(--font-head);font-size:2.2rem;font-weight:800;color:var(--sun);" data-target="30">0</div>
+            <div class="count-num" style="font-size:2.2rem;font-weight:800;color:var(--sun);" data-target="30">0</div>
             <div style="font-size:.8rem;color:rgba(0, 0, 0, 0.65);">Year Panel Warranty</div>
           </div>
           <div>
-            <div class="count-num" style="font-family:var(--font-head);font-size:2.2rem;font-weight:800;color:var(--sun);" data-target="3">0</div>
+            <div class="count-num" style="font-size:2.2rem;font-weight:800;color:var(--sun);" data-target="3">0</div>
             <div style="font-size:.8rem;color:rgba(0, 0, 0, 0.65);">Year ROI Average</div>
           </div>
         </div>
@@ -1341,47 +1377,47 @@
 </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
     const mainSlider = new Swiper('.index_main_video_slider', {
-        loop: true,
-        speed: 1000,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+      loop: true,
+      speed: 1000,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        init: function() {
+          handleVideoPlayback(this);
         },
-        on: {
-            init: function () {
-                handleVideoPlayback(this);
-            },
-            slideChange: function () {
-                handleVideoPlayback(this);
-            }
+        slideChange: function() {
+          handleVideoPlayback(this);
         }
+      }
     });
 
     function handleVideoPlayback(swiper) {
-        // First, pause all videos
-        const allVideos = document.querySelectorAll('.index_main_video_slider video');
-        allVideos.forEach(v => {
-            v.pause();
-            v.currentTime = 0;
+      // First, pause all videos
+      const allVideos = document.querySelectorAll('.index_main_video_slider video');
+      allVideos.forEach(v => {
+        v.pause();
+        v.currentTime = 0;
+      });
+
+      // Get the video in the current active slide
+      const activeSlide = swiper.slides[swiper.activeIndex];
+      const currentVideo = activeSlide.querySelector('video');
+
+      if (currentVideo) {
+        currentVideo.play().catch(error => {
+          console.log("Autoplay blocked. User interaction might be needed.");
         });
 
-        // Get the video in the current active slide
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        const currentVideo = activeSlide.querySelector('video');
-
-        if (currentVideo) {
-            currentVideo.play().catch(error => {
-                console.log("Autoplay blocked. User interaction might be needed.");
-            });
-
-            // CRITICAL: Next slide only when THIS video ends
-            currentVideo.onended = function() {
-                swiper.slideNext();
-            };
-        }
+        // CRITICAL: Next slide only when THIS video ends
+        currentVideo.onended = function() {
+          swiper.slideNext();
+        };
+      }
     }
-});
+  });
 </script>
 <?php include 'footer.php'; ?>
