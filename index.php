@@ -171,7 +171,7 @@
   <div class="hero-orb orb-3"></div>
 
   <div class="container position-relative" style="z-index:2;">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center">
 
       <div class="col-lg-6">
         <!-- <div class="hero-badge"><i class="bi bi-sun-fill me-1"></i> Trusted Solar Energy Partner</div>
@@ -264,7 +264,7 @@
 <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
 <section id="about">
   <div class="container">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center ">
 
       <div class="col-lg-5 fade-up">
         <div class="about-img-wrap">
@@ -328,7 +328,7 @@
       </div>
 
       <div class="col-lg-7 fade-up fade-up-d2">
-        <div class="section-tag"><i class="bi bi-info-circle me-1"></i> About Nabhas Solar</div>
+        <div class="section-tag mt-5"><i class="bi bi-info-circle me-1"></i> About Nabhas Solar</div>
         <h2 class="section-title">Trusted Solar <span> Solutions for Homes </span>, Businesses & Industries</h2>
         <!-- <h2 class="section-title">Turning Sunlight into <span>Reliable Electricity</span></h2> -->
         <p class="text-muted mb-4" style="line-height:1.8;">Nabhas Solar provides high-quality solar solutions for homes, businesses, and industries. Reduce your electricity bills, get subsidy benefits, and enjoy long-term savings with our reliable solar systems.</p>
@@ -698,7 +698,7 @@
 <!-- ═══════════════════════════════ BENEFITS ═══════════════════════════════ -->
 <section id="benefits">
   <div class="container position-relative" style="z-index:1;">
-    <div class="row g-5 align-items-center">
+    <div class="row align-items-center">
       <div class="col-lg-5 fade-up">
         <div class="section-tag" style="background:#0b1f3a;color:var(--sun);">Why Nabhas Solar?</div>
         <h2 class="section-title" style="color:#0b1f3a;">Benefits of <span style="color:var(--sun);">Solar Energy</span></h2>
@@ -887,7 +887,7 @@
       <div class="divider"></div>
       <!-- <p class="section-sub mx-auto">Ready to go solar? Fill out the form below and one of our experts will reach out within 24 hours.</p> -->
     </div>
-    <div class="row g-5">
+    <div class="row">
       <div class="col-lg-7 fade-up">
         <div class="contact-form-wrap">
           <div class="row g-3">
