@@ -27,7 +27,7 @@
 
 
 
-<section class="solar-contact-hero">
+<!-- <section class="solar-contact-hero">
 
   <div class="container">
 
@@ -41,7 +41,7 @@
 
   </div>
 
-</section>
+</section> -->
 
 
 

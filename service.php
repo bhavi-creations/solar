@@ -6,7 +6,7 @@
         <div class="container h-100 d-flex align-items-center justify-content-center">
             <div class="row w-100">
                 <div class="col-12 text-center text-white">
-                    <h1 class="about-new-section-title fw-bold">Service</h1>
+                    <h1 class="about-new-section-title fw-bold">Services</h1>
                     <div class="about-new-section-divider mx-auto"></div>
                     <p class="about-new-section-description fs-5 mt-3">
                         End-to-end solar solutions for residential, commercial, and <br>
