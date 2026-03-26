@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* navbar stylings  */
 :root {
@@ -2274,7 +2274,8 @@ footer {
 }
 
 body {
-    font-family: var(--font-body);
+    /* font-family: var(--font-body); */
+    font-family:"Poppins", sans-serif !important ;
 }
 
 h1,
@@ -2282,7 +2283,8 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: var(--font-head);
+    /* font-family: var(--font-head); */
+    font-family:"Poppins", sans-serif !important ;
 }
 
 /* PAGE BACKGROUND */
@@ -2834,8 +2836,8 @@ h5 {
 }
 
 .solar-service-btn-cta-outline {
-    background: transparent;
-    color: rgba(0, 0, 0, 0.85);
+    background: black;
+    color: rgba(255, 255, 255, 0.85);
     /* color: rgba(0, 0, 0, 0.85); */
     font-weight: 600;
     font-size: .95rem;
@@ -4469,5 +4471,176 @@ h5 {
 
     .about-new-section-description {
         font-size: 0.95rem !important;
+    }
+}
+
+
+/* new navbar  */
+   /* NAVBAR */
+        .nabhas_solor_new_navbar {
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* CONTAINER */
+        .nabhas_solor_new_navbar_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 30px;
+        }
+
+        /* LOGO */
+        .nabhas_solor_new_navbar_logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nabhas_solor_new_navbar_logo span {
+            background: black;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nabhas_solor_new_navbar_logo h2 {
+            font-size: 20px;
+            color: black;
+        }
+
+        /* MENU */
+        .nabhas_solor_new_navbar_menu ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nabhas_solor_new_navbar_menu ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            padding: 10px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        /* HOVER */
+        .nabhas_solor_new_navbar_menu ul li a:hover {
+            background: black;
+            color: white;
+        }
+
+        /* 🔥 ACTIVE MENU */
+        .nabhas_solor_new_navbar_menu ul li a.active {
+            background: #f2f2f2;
+            /* light background */
+            color: black;
+            font-weight: 600;
+        }
+
+        /* BUTTON */
+        .nabhas_solor_new_navbar_btn {
+            background: black;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        /* HAMBURGER */
+        .nabhas_solor_new_navbar_toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* CLOSE BUTTON */
+        .nabhas_solor_new_navbar_close {
+            display: none;
+        }
+
+        /* MOBILE VIEW */
+        @media (max-width: 992px) {
+
+            .nabhas_solor_new_navbar_toggle {
+                display: block;
+            }
+
+            .nabhas_solor_new_navbar_menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 260px;
+                height: 100%;
+                background: white;
+                transition: 0.3s;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+
+            .nabhas_solor_new_navbar_menu.active {
+                right: 0;
+            }
+
+            .nabhas_solor_new_navbar_menu ul {
+                flex-direction: column;
+                margin-top: 60px;
+                gap: 20px;
+            }
+
+            .nabhas_solor_new_navbar_close {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                font-size: 22px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+
+
+        /* index page video section   */
+        .index_main_video_slider_section {
+    padding: 20px 0;
+    background: #f8f9fa; /* Optional background color */
+}
+
+.index_main_video_slider_card {
+    border-radius: 12px;
+    overflow: hidden; /* Rounded corners apply avvadaniki */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index_main_video_slider_card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Video frame cut avvakunda motham kanipinchali ante */
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for a premium look */
+.index_main_video_slider_card:hover video {
+    transform: scale(1.02);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .index_main_video_slider_card {
+        margin-bottom: 10px;
     }
 }

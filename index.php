@@ -5,29 +5,14 @@
 <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
 <?php include 'navbar.php'; ?>
 
-<div class="section team-area section-padding">
+<!-- <div class="section team-area section-padding">
   <div class="container">
     <div class="team-wrapper">
-      <!-- Team Title Start -->
-      <!-- <div class="team-title-wrapper">
-          
-            <div class="">
-              <div class="section-title">
-                
-                <p class="title text-center">Our Brands</p>
-                <h3 class="sub-title text-center">Solar panels (540wp to 620wp) with bifacial & topon series <br> <strong>@30 year Warranty</strong></h3>
-                
-              </div>
-            </div>
-
-           
-       
-        </div> -->
+     
 
 
 
-
-      <!-- Team Content Wrapper Start -->
+     
       <div class="team-content-wrapper">
         <div class="team-content-wrapper">
 
@@ -79,15 +64,39 @@
           </div>
         </div>
       </div>
-      <!-- Team Content Wrapper End -->
+      
     </div>
   </div>
-</div>
+</div> -->
 
 
 
 
 <!-- <img src="./assets/img/slider_1.png" alt="" class="img-fluid"> -->
+
+
+
+<div class="container-fluid index_main_video_slider_section">
+    <div class="row g-3"> <div class="col-md-6 col-12">
+            <div class="index_main_video_slider_card">
+                <video autoplay muted loop playsinline controls class="w-100 h-auto">
+                    <source src="./assets/img/website video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-12">
+            <div class="index_main_video_slider_card">
+                <video autoplay muted loop playsinline controls class="w-100 h-auto">
+                    <source src="./assets/img/website video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
 <section id="hero">
@@ -449,7 +458,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="new_index_service_section__card">
           <div class="new_index_service_section__image-box">
-            <img src="./assets/img/c_1.png" alt="Service Name">
+            <img src="./assets/img/rotary.png" alt="Service Name">
           </div>
           <div class="new_index_service_section__content-box">
             <h3 class="new_index_service_section__service-title">Rotary Old Age Home & Deepu Engineering  (Commercial)</h3>

@@ -33,25 +33,25 @@
 
 <body>
 
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <!-- <nav class="navbar navbar-expand-lg sticky-top">
                 <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                                 <img src="./assets/img/logo.png" alt="Sreenika Logo">
-                                <!-- <img src="logo_1.png" alt="Sreenika Logo"> -->
-                        </a>
+                               
+                        </a> -->
 
-                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        <!-- <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
-                        </button>
+                        </button> -->
 
-                        <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav ms-auto">
                                         <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
-                                        <!-- <li class="nav-item dropdown">
+                                        <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li> -->
+        <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="about.html" id="serviceDrop" role="button"
                             data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
@@ -183,18 +183,16 @@
 
                         </ul>
                     </li> -->
-                                        <!-- <li class="nav-item"><a class="nav-link" href="blogs.php">Blogs</a></li> -->
-                                        <li class="nav-item"><a class="nav-link" href="service.php">Service</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="gallery.php">Project</a></li>
-                                        <!-- <li class="nav-item"><a class="nav-link" href="review.php">Testimonials</a></li> -->
-                                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                                        <li> <a href="tel:+918341950894" class="solar-service-btn-cta-outline"><i class="bi bi-telephone-fill"></i> 8341950894</a>
-                                        <!-- <li> <a href="get_in_touch.php" class="solar-service-btn-cta-outline"><i class="bi bi-telephone-fill"></i> Get a Free Quote’</a> -->
-                                        </li>
-                                        <!-- <li class="nav-item "><a class="nav-link appointment_section" href="appointment.php">Appointment</a> -->
-                                        </li>
+        <!-- <li class="nav-item"><a class="nav-link" href="blogs.php">Blogs</a></li> -->
+        <!-- <li class="nav-item"><a class="nav-link" href="service.php">Service</a></li> -->
+        <!-- <li class="nav-item"><a class="nav-link" href="gallery.php">Project</a></li> -->
+        <!-- <li class="nav-item"><a class="nav-link" href="review.php">Testimonials</a></li> -->
+        <!-- <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li> -->
+        <!-- <li> <a href="tel:+918341950894" class="solar-service-btn-cta-outline"><i class="bi bi-telephone-fill"></i> 8341950894</a> -->
+        <!-- <li> <a href="get_in_touch.php" class="solar-service-btn-cta-outline"><i class="bi bi-telephone-fill"></i> Get a Free Quote’</a> -->
 
-                                        <!-- <button>
+
+        <!-- <button>
 
 
 
@@ -205,10 +203,49 @@
                                                         </a>
                                                 </li>
                                         </button> -->
-                                </ul>
+        <!-- </ul>
                         </div>
                 </div>
-        </nav>
+        </nav> -->
+
+
+
+        <header class="nabhas_solor_new_navbar">
+                <div class="nabhas_solor_new_navbar_container">
+
+                        <!-- LOGO -->
+                        <div class="nabhas_solor_new_navbar_logo">
+                                <img src="./assets/img/logo.png" alt="Sreenika Logo">
+                        </div>
+
+                        <!-- MENU -->
+                        <nav class="nabhas_solor_new_navbar_menu" id="navbarMenu">
+
+                                <div class="nabhas_solor_new_navbar_close" onclick="toggleMenu()">✖</div>
+
+                                <ul>
+                                        <li><a href="index.php" class="active">index</a></li>
+                                        <li><a href="about.php">About Us</a></li>
+                                        <li><a href="service.php">Service</a></li>
+
+                                        <li><a href="gallery.php">Project</a></li>
+                                        <li><a href="contact.php">Contact</a></li>
+                                        <!-- <li><a href="#">Join Us</a></li> -->
+                                        <li><a href="tel:+918341950894" class="nabhas_solor_new_navbar_btn">+91 8341950894</a></li>
+                                </ul>
+                        </nav>
+
+                        <!-- HAMBURGER -->
+                        <div class="nabhas_solor_new_navbar_toggle" onclick="toggleMenu()">☰</div>
+
+                </div>
+        </header>
+
+        <script>
+                function toggleMenu() {
+                        document.getElementById("navbarMenu").classList.toggle("active");
+                }
+        </script>
 
 
 

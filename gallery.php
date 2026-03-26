@@ -2,20 +2,19 @@
 
 
 <section class="gallery-new-section-wrapper">
-    <div class="about-new-section-overlay">
-        <div class="container h-100 d-flex align-items-center justify-content-center">
-            <div class="row w-100">
-                <div class="col-12 text-center text-white">
-                    <h1 class="about-new-section-title fw-bold">Our Projects</h1>
-                    <div class="about-new-section-divider mx-auto"></div>
-                    <!-- <p class="about-new-section-description fs-5 mt-3">
-                        Crafting Excellence Through Unique IT Services — <br>
-                        Transforming Ideas Into Powerful Digital Solutions Since 2018
-                    </p> -->
-                </div>
-            </div>
+  <div class="about-new-section-overlay">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="row w-100">
+        <div class="col-12 text-center text-white">
+          <h1 class="about-new-section-title fw-bold">Our Projects</h1>
+          <div class="about-new-section-divider mx-auto"></div>
+          <p class="about-new-section-description fs-5 mt-3">
+            Explore our completed solar installations across residential, commercial, and industrial sectors
+          </p>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
@@ -293,31 +292,31 @@
   <section class="gallery_section">
     <div class="container">
 
-      <!-- Heading -->
-      <div class="text-center mb-2">
-        <!-- <p class="section-label">Portfolio</p> -->
+
+      <!-- <div class="text-center mb-2">
+
         <h2 class="section-heading">Our Projects</h2>
         <hr class="section-divider" />
-      </div>
+      </div> -->
 
       <!-- Tabs -->
       <ul class="nav nav-tabs" id="projectTabs" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="residential-tab" data-bs-toggle="tab"
             data-bs-target="#residential" type="button" role="tab">
-            Residential<span class="d-none d-sm-inline"> Projects</span>
+            Residential Projects
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="commercial-tab" data-bs-toggle="tab"
             data-bs-target="#commercial" type="button" role="tab">
-            Commercial<span class="d-none d-sm-inline"> Projects</span>
+            Commercial Projects
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="industrial-tab" data-bs-toggle="tab"
             data-bs-target="#industrial" type="button" role="tab">
-            Industrial<span class="d-none d-sm-inline"> Projects</span>
+            Industrial Projects
           </button>
         </li>
       </ul>
@@ -329,7 +328,7 @@
         <div class="tab-pane fade show active" id="residential" role="tabpanel">
           <div class="row g-4">
 
-            <div class="col-md-4 col-sm-6">
+            <!-- <div class="col-md-4 col-sm-6">
               <div class="project-card"
                 data-bs-toggle="modal" data-bs-target="#projectModal"
                 data-img="./assets/img/r-1.png"
@@ -339,6 +338,21 @@
                   <p class="proj-tag">Residential</p>
                   <p class="proj-title">Residential</p>
                   <p class="proj-desc">1KW Solar Pannel.</p>
+                  <span class="proj-view-btn">View Project ↗</span>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-md-4 col-sm-6">
+              <div class="project-card"
+                data-bs-toggle="modal" data-bs-target="#projectModal"
+                data-img="./assets/img/r-3.png"
+                data-title="commercial" data-tag="Residential" data-desc="3kw Solar Pannel">
+                <img src="./assets/img/r-3.png" alt="Urban Nest" />
+                <div class="project-overlay">
+                  <!-- <p class="proj-tag">Residential</p> -->
+                  <p class="proj-title">Residential</p>
+                  <p class="proj-desc">3kw Solar Pannel</p>
                   <span class="proj-view-btn">View Project ↗</span>
                 </div>
               </div>
@@ -387,9 +401,9 @@
             <div class="col-md-4 col-sm-6">
               <div class="project-card"
                 data-bs-toggle="modal" data-bs-target="#projectModal"
-                data-img="./assets/img/c_1.png"
+                data-img="./assets/img/rotary.png"
                 data-title="Commercial" data-tag="Commercial" data-desc="9KW old age Home (Rotary Club).">
-                <img src="./assets/img/c_1.png" alt="Apex Tower" />
+                <img src="./assets/img/rotary.png" alt="Apex Tower" />
                 <div class="project-overlay">
                   <!-- <p class="proj-tag">Commercial</p> -->
                   <p class="proj-title">Commercial</p>
@@ -399,20 +413,7 @@
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
-              <div class="project-card"
-                data-bs-toggle="modal" data-bs-target="#projectModal"
-                data-img="./assets/img/r-3.png"
-                data-title="commercial" data-tag="Residential" data-desc="3kw Solar Pannel">
-                <img src="./assets/img/r-3.png" alt="Urban Nest" />
-                <div class="project-overlay">
-                  <!-- <p class="proj-tag">Residential</p> -->
-                  <p class="proj-title">Residential</p>
-                  <p class="proj-desc">3kw Solar Pannel</p>
-                  <span class="proj-view-btn">View Project ↗</span>
-                </div>
-              </div>
-            </div>
+
 
 
 
@@ -554,4 +555,4 @@
     });
   </script>
 
-<?php include 'footer.php' ; ?>
+  <?php include 'footer.php'; ?>

@@ -25,7 +25,7 @@
         left: -100px;
         width: 420px;
         height: 420px;
-        background: radial-gradient(circle, rgba(0, 180, 255, 0.10) 0%, transparent 70%);
+        /* background: radial-gradient(circle, rgba(0, 180, 255, 0.10) 0%, transparent 70%); */
         border-radius: 50%;
         pointer-events: none;
     }
@@ -573,7 +573,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <div class="broucher_link ">
+    <!-- <div class="broucher_link ">
         <a href="./assets/img/Nabhas Solar Broucher.pdf" download="Nabhas_Solar_Brochure" class="text-decoration-none">
             <div class="image-container">
                 <img src="./assets/img/favicons.png" alt="Brochure" class="img-fluid">
@@ -581,7 +581,7 @@
 
             </div>
         </a>
-    </div>
+    </div> -->
 
 
 

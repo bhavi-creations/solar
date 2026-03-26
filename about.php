@@ -25,12 +25,12 @@
   <div class="container position-relative" style="z-index:1;">
 
     <!-- Header -->
-    <div class="text-center mb-5 fade-up">
+    <!-- <div class="text-center mb-5 fade-up">
       <div class="section-tag"><i class="bi bi-sun-fill"></i> About Nabhas Solar</div>
       <h2 class="section-title">Innovating the Future of <span>Renewable Energy</span></h2>
       <div class="accent-line mx-auto"></div>
       <p class="mx-auto" style="max-width:640px;color:#0B1F3A;font-size:1.03rem;line-height:1.8;">An innovative renewable energy company dedicated to delivering sustainable solar solutions that empower communities, businesses and industries to transition toward clean energy.</p>
-    </div>
+    </div> -->
 
     <!-- Two-column layout -->
     <div class="row align-items-center g-5 mb-5">

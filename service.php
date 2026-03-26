@@ -6,7 +6,7 @@
         <div class="container h-100 d-flex align-items-center justify-content-center">
             <div class="row w-100">
                 <div class="col-12 text-center text-white">
-                    <h1 class="about-new-section-title fw-bold">Services</h1>
+                    <h1 class="about-new-section-title fw-bold"> Our Services</h1>
                     <div class="about-new-section-divider mx-auto"></div>
                     <p class="about-new-section-description fs-5 mt-3">
                         End-to-end solar solutions for residential, commercial, and <br>
@@ -32,7 +32,7 @@
 
 
 
-    <div class="solar-service-hero">
+    <!-- <div class="solar-service-hero">
         <div class="container position-relative" style="z-index:1;">
             <div class="solar-service-hero-tag"><i class="bi bi-grid-fill"></i> Our Services</div>
             <h1 class="solar-service-hero-title">Comprehensive Solar <em>Solutions</em><br>Built for Every Need</h1>
@@ -46,37 +46,17 @@
                 <div class="solar-service-hero-pill"><i class="bi bi-wrench-adjustable"></i> Maintenance</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <section class="solar-service-section">
         <div class="container">
 
-            <div class="solar-service-stats-strip fade-up">
-                <div class="solar-service-stat-item">
-                    <div class="solar-service-stat-num">400+</div>
-                    <div class="solar-service-stat-lbl">Installations</div>
-                </div>
-                <div class="solar-service-stat-item">
-                    <div class="solar-service-stat-num">300+</div>
-                    <div class="solar-service-stat-lbl">Customers Satisfaction</div>
-                </div>
-                <div class="solar-service-stat-item">
-                    <div class="solar-service-stat-num">98%</div>
-                    <div class="solar-service-stat-lbl">Satisfaction</div>
-                </div>
-                <!-- <div class="solar-service-stat-item">
-                    <div class="solar-service-stat-num">15 Yrs</div>
-                    <div class="solar-service-stat-lbl">Experience</div>
-                </div> -->
-                <div class="solar-service-stat-item">
-                    <div class="solar-service-stat-num">90%</div>
-                    <div class="solar-service-stat-lbl">Avg Savings</div>
-                </div>
-            </div>
+
 
             <div class="text-center mb-5 fade-up">
                 <div class="solar-service-section-label"><i class="bi bi-sun-fill"></i> What We Offer</div>
-                <h2 class="solar-service-section-heading">Every Solar Service You <span>Need</span></h2>
+                  
+                <h2 class="solar-service-section-heading">Our Complete <span>Solar</span> Solutions</h2>
                 <div class="solar-service-accent-bar mx-auto"></div>
             </div>
 
@@ -84,7 +64,7 @@
                 <div class="col-sm-6 col-lg-4 fade-up fd1">
                     <div class="solar-service-card-wrap">
                         <div class="solar-service-img-frame">
-                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Residential" />
+                            <img src="./assets/img/r-3.png" alt="Residential" />
                             <div class="solar-service-img-badge"><i class="bi bi-house-fill"></i> Residential</div>
                         </div>
                         <div class="solar-service-card">
@@ -107,7 +87,7 @@
                 <div class="col-sm-6 col-lg-4 fade-up fd2">
                     <div class="solar-service-card-wrap">
                         <div class="solar-service-img-frame">
-                            <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Commercial" />
+                            <img src="./assets/img/c_2.png" alt="Commercial" />
                             <div class="solar-service-img-badge"><i class="bi bi-building-fill"></i> Commercial</div>
                         </div>
                         <div class="solar-service-card">
@@ -125,6 +105,44 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <div class="col-sm-6 col-lg-4 fade-up fd1">
+                    <div class="solar-service-card-wrap">
+                        <div class="solar-service-img-frame">
+                            <img src="./assets/img/i_1.png" alt="Residential" />
+                            <div class="solar-service-img-badge"><i class="bi bi-house-fill"></i> Industrial</div>
+                        </div>
+                        <div class="solar-service-card">
+                            <div class="solar-service-body">
+                                <div class="solar-service-icon-tag"><i class="bi bi-house-fill"></i></div>
+                                <h3 class="solar-service-name">Industrial</h3>
+                                <p class="solar-service-desc">Sabhas Solar Industrial is a company focused on providing efficient solar energy solutions for industrial applications, helping businesses reduce energy costs and adopt sustainable power.</p>
+                                <div class="solar-service-pills">
+                                    <span class="solar-service-pill">5 Years Maintenance</span>
+                                    <span class="solar-service-pill">Low maintenance</span>
+                                    <span class="solar-service-pill">High efficiency</span>
+                                </div>
+                                <div class="solar-service-divider"></div>
+                                <!-- <a href="#" class="solar-service-cta">Learn More <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <div class="col-sm-6 col-lg-4 fade-up fd3">
                     <div class="solar-service-card-wrap">
@@ -221,30 +239,37 @@
 
 
 
-                <div class="col-sm-6 col-lg-4 fade-up fd1">
-                    <div class="solar-service-card-wrap">
-                        <div class="solar-service-img-frame">
-                            <img src="./assets/img/i_1.png" alt="Residential" />
-                            <div class="solar-service-img-badge"><i class="bi bi-house-fill"></i> Industrial</div>
-                        </div>
-                        <div class="solar-service-card">
-                            <div class="solar-service-body">
-                                <div class="solar-service-icon-tag"><i class="bi bi-house-fill"></i></div>
-                                <h3 class="solar-service-name">Industrial</h3>
-                                <p class="solar-service-desc">Sabhas Solar Industrial is a company focused on providing efficient solar energy solutions for industrial applications, helping businesses reduce energy costs and adopt sustainable power.</p>
-                                <div class="solar-service-pills">
-                                    <span class="solar-service-pill">5 Years Maintenance</span>
-                                    <span class="solar-service-pill">Low maintenance</span>
-                                    <span class="solar-service-pill">High efficiency</span>
-                                </div>
-                                <div class="solar-service-divider"></div>
-                                <!-- <a href="#" class="solar-service-cta">Learn More <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span></a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
+
+
+
+            <div class=" my-5 solar-service-stats-strip fade-up">
+                <div class="solar-service-stat-item">
+                    <div class="solar-service-stat-num">400+</div>
+                    <div class="solar-service-stat-lbl">Installations</div>
+                </div>
+                <div class="solar-service-stat-item">
+                    <div class="solar-service-stat-num">300+</div>
+                    <div class="solar-service-stat-lbl">Customers Satisfaction</div>
+                </div>
+                <div class="solar-service-stat-item">
+                    <div class="solar-service-stat-num">98%</div>
+                    <div class="solar-service-stat-lbl">Satisfaction</div>
+                </div>
+                <!-- <div class="solar-service-stat-item">
+                    <div class="solar-service-stat-num">15 Yrs</div>
+                    <div class="solar-service-stat-lbl">Experience</div>
+                </div> -->
+                <div class="solar-service-stat-item">
+                    <div class="solar-service-stat-num">90%</div>
+                    <div class="solar-service-stat-lbl">Avg Savings</div>
+                </div>
+            </div>
+
+
+
 
             <div class="solar-service-process-row fade-up">
                 <div class="text-center mb-4">
@@ -288,7 +313,7 @@
 
             <div class="solar-service-cta-banner fade-up">
                 <div>
-                    <div class="solar-service-cta-heading">Ready to Harness the Sun?</div>
+                    <div class="solar-service-cta-heading">Start saving with Solar Today</div>
                     <div class="solar-service-cta-sub">Get a free site assessment and zero-obligation proposal within 24 hours.</div>
                 </div>
                 <div class="d-flex flex-wrap gap-3">
@@ -299,6 +324,8 @@
             </div>
 
         </div>
+
+
     </section>
 
 
