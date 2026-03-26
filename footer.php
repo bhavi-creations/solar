@@ -591,6 +591,39 @@
         <img src="./assets/img/Call.png" alt="" style="width:50px;  height:50px;" ;>
     </a>
 
+
+    <!-- counting js   -->
+     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.count-num');
+    const speed = 200; // Speed adjustment (Higher is slower)
+
+    const startCount = (el) => {
+        const target = +el.getAttribute('data-target');
+        const count = +el.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+            el.innerText = Math.ceil(count + increment);
+            setTimeout(() => startCount(el), 10);
+        } else {
+            el.innerText = target;
+        }
+    };
+
+    // Intersection Observer to start animation when visible on screen
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCount(entry.target);
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+});
+     </script>
 </footer>
 
 <!-- ===== NABHAS SOLAR FOOTER END ===== -->

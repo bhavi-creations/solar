@@ -8,9 +8,9 @@
                 <div class="col-12 text-center text-white">
                     <h1 class="about-new-section-title fw-bold"> Our Services</h1>
                     <div class="about-new-section-divider mx-auto"></div>
-                    <p class="about-new-section-description fs-5 mt-3">
-                        End-to-end solar solutions for residential, commercial, and <br>
-                        industrial projects—covering design, installation, approvals, and ongoing support
+                    <p class="about-new-section-description fs-10 mt-3">
+                        We provide complete solar solutions including system design, installation, <br>
+                        approvals, and long-term maintenance for residential, commercial, and industrial projects
                     </p>
                 </div>
             </div>
@@ -55,7 +55,7 @@
 
             <div class="text-center mb-5 fade-up">
                 <div class="solar-service-section-label"><i class="bi bi-sun-fill"></i> What We Offer</div>
-                  
+
                 <h2 class="solar-service-section-heading">Our Complete <span>Solar</span> Solutions</h2>
                 <div class="solar-service-accent-bar mx-auto"></div>
             </div>
@@ -64,7 +64,7 @@
                 <div class="col-sm-6 col-lg-4 fade-up fd1">
                     <div class="solar-service-card-wrap">
                         <div class="solar-service-img-frame">
-                            <img src="./assets/img/r-3.png" alt="Residential" />
+                            <img src="./assets/img/c_2.png" alt="Residential" />
                             <div class="solar-service-img-badge"><i class="bi bi-house-fill"></i> Residential</div>
                         </div>
                         <div class="solar-service-card">
@@ -87,7 +87,7 @@
                 <div class="col-sm-6 col-lg-4 fade-up fd2">
                     <div class="solar-service-card-wrap">
                         <div class="solar-service-img-frame">
-                            <img src="./assets/img/c_2.png" alt="Commercial" />
+                            <img src="./assets/img/rotary.png" alt="Commercial" />
                             <div class="solar-service-img-badge"><i class="bi bi-building-fill"></i> Commercial</div>
                         </div>
                         <div class="solar-service-card">

@@ -76,7 +76,7 @@
 
 
 
-<div class="container-fluid index_main_video_slider_section">
+<!-- <div class="container-fluid index_main_video_slider_section">
     <div class="row g-3"> <div class="col-md-6 col-12">
             <div class="index_main_video_slider_card">
                 <video autoplay muted loop playsinline controls class="w-100 h-auto">
@@ -96,7 +96,36 @@
         </div>
 
     </div>
+</div> -->
+
+
+<div class="container-fluid index_main_video_slider_section p-0">
+  <div class="swiper index_main_video_slider">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="index_main_video_slider_card">
+          <video muted playsinline controls preload="auto" class="w-100 h-auto">
+            <source src="./assets/img/elite.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="index_main_video_slider_card">
+          <video muted playsinline controls preload="auto" class="w-100 h-auto">
+            <source src="./assets/img/website video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 </div>
+
+
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
 <section id="hero">
@@ -128,7 +157,7 @@
           <a href="./assets/img/Nabhas Solar Broucher.pdf" download="Nabhas_Solar_Brochure" class="text-decoration-none">
             <div class="image-container btn-sun">
               <!-- <img src="./assets/img/favicons.png" alt="Brochure" class="img-fluid"> -->
-               Download Solar Broucher
+              Download Solar Broucher
 
 
             </div>
@@ -188,7 +217,7 @@
          
         </div> -->
         <!-- <img src="./assets/img/r-3.png" alt="Nabhas Solar" class="img-fluid"> -->
-<?php include 'get_in_touch.php' ; ?>
+        <?php include 'get_in_touch.php'; ?>
       </div>
 
     </div>
@@ -461,7 +490,7 @@
             <img src="./assets/img/rotary.png" alt="Service Name">
           </div>
           <div class="new_index_service_section__content-box">
-            <h3 class="new_index_service_section__service-title">Rotary Old Age Home & Deepu Engineering  (Commercial)</h3>
+            <h3 class="new_index_service_section__service-title">Rotary Old Age Home & Deepu Engineering (Commercial)</h3>
             <p class="new_index_service_section__service-desc">
               Customized solar solutions for non-residential spaces. These projects focus on reducing operational costs for offices and social organizations while maintaining a stable and clean power supply.
             </p>
@@ -1309,5 +1338,50 @@
       if (c) c.hide();
     });
   });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const mainSlider = new Swiper('.index_main_video_slider', {
+        loop: true,
+        speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            init: function () {
+                handleVideoPlayback(this);
+            },
+            slideChange: function () {
+                handleVideoPlayback(this);
+            }
+        }
+    });
+
+    function handleVideoPlayback(swiper) {
+        // First, pause all videos
+        const allVideos = document.querySelectorAll('.index_main_video_slider video');
+        allVideos.forEach(v => {
+            v.pause();
+            v.currentTime = 0;
+        });
+
+        // Get the video in the current active slide
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        const currentVideo = activeSlide.querySelector('video');
+
+        if (currentVideo) {
+            currentVideo.play().catch(error => {
+                console.log("Autoplay blocked. User interaction might be needed.");
+            });
+
+            // CRITICAL: Next slide only when THIS video ends
+            currentVideo.onended = function() {
+                swiper.slideNext();
+            };
+        }
+    }
+});
 </script>
 <?php include 'footer.php'; ?>

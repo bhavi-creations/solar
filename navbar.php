@@ -210,41 +210,88 @@
 
 
 
-        <header class="nabhas_solor_new_navbar">
+        <!-- <header class="nabhas_solor_new_navbar">
                 <div class="nabhas_solor_new_navbar_container">
 
-                        <!-- LOGO -->
+                      
                         <div class="nabhas_solor_new_navbar_logo">
                                 <img src="./assets/img/logo.png" alt="Sreenika Logo">
                         </div>
 
-                        <!-- MENU -->
+                    
                         <nav class="nabhas_solor_new_navbar_menu" id="navbarMenu">
 
                                 <div class="nabhas_solor_new_navbar_close" onclick="toggleMenu()">✖</div>
 
                                 <ul>
-                                        <li><a href="index.php" class="active">index</a></li>
+                                        <li><a href="index.php" class="active">Home</a></li>
                                         <li><a href="about.php">About Us</a></li>
                                         <li><a href="service.php">Service</a></li>
 
                                         <li><a href="gallery.php">Project</a></li>
                                         <li><a href="contact.php">Contact</a></li>
-                                        <!-- <li><a href="#">Join Us</a></li> -->
+                                    
                                         <li><a href="tel:+918341950894" class="nabhas_solor_new_navbar_btn">+91 8341950894</a></li>
                                 </ul>
                         </nav>
 
-                        <!-- HAMBURGER -->
+                       
                         <div class="nabhas_solor_new_navbar_toggle" onclick="toggleMenu()">☰</div>
 
                 </div>
-        </header>
+        </header> -->
 
+
+
+
+        <header class="nabhas_solor_new_navbar">
+                <div class="nabhas_solor_new_navbar_container">
+
+                        <div class="nabhas_solor_new_navbar_logo">
+                                <img src="./assets/img/logo.png" alt="Sreenika Logo" class="navbar_logo_img">
+                        </div>
+
+                        <nav class="nabhas_solor_new_navbar_menu" id="navbarMenu">
+                                <div class="nabhas_solor_new_navbar_close" onclick="toggleMenu()">✖</div>
+                                <ul>
+                                        <li><a href="index.php" class="active">Home</a></li>
+                                        <li><a href="about.php">About Us</a></li>
+                                        <li><a href="service.php">Service</a></li>
+                                        <li><a href="gallery.php">Project</a></li>
+                                        <li><a href="contact.php">Contact</a></li>
+                                        <li><a href="tel:+918341950894" class="nabhas_solor_new_navbar_btn">+91 8341950894</a></li>
+                                </ul>
+                        </nav>
+
+                        <div class="nabhas_solor_new_navbar_toggle" id="mobileToggle" onclick="toggleMenu()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </div>
+
+                </div>
+        </header>
         <script>
                 function toggleMenu() {
                         document.getElementById("navbarMenu").classList.toggle("active");
                 }
+        </script>
+
+        <script>
+                function toggleMenu() {
+    const menu = document.getElementById("navbarMenu");
+    menu.classList.toggle("active");
+}
+
+// Optional: Menu baita click chesthe close avvadaniki
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById("navbarMenu");
+    const toggle = document.getElementById("mobileToggle");
+    
+    if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+        menu.classList.remove("active");
+    }
+});
         </script>
 
 

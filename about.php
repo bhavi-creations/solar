@@ -266,18 +266,12 @@
         <div class="ss-num">400<span style="font-size:1rem;">+</span></div>
         <div class="ss-lbl">Installed Capacity</div>
       </div>
-      <!-- <div class="stat-strip-item">
-          <div class="ss-num">2,000+</div>
-          <div class="ss-lbl">Projects Completed</div>
-        </div> -->
+      
       <div class="stat-strip-item">
         <div class="ss-num">98%</div>
         <div class="ss-lbl">Client Satisfaction</div>
       </div>
-      <!-- <div class="stat-strip-item">
-          <div class="ss-num">12+</div>
-          <div class="ss-lbl">Years Experience</div>
-        </div> -->
+     
       <div class="stat-strip-item">
         <div class="ss-num">90%</div>
         <div class="ss-lbl">Avg. Bill Reduction</div>

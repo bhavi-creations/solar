@@ -170,7 +170,7 @@ img {
     padding: 12px 20px !important;
 }
 
-.nav-link :hover{
+.nav-link :hover {
     background-color: red;
 }
 
@@ -462,11 +462,12 @@ img {
 }
 
 .hero-stat-num {
-    font-family: var(--font-head);
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.4rem;
     font-weight: 800;
     color: var(--navy);
-    /* color: var(--sun); */
+
     line-height: 1;
 }
 
@@ -476,7 +477,7 @@ img {
     margin-top: 4px;
 }
 
-/* Solar panel SVG illustration */
+
 .hero-visual {
     position: relative;
 }
@@ -1375,7 +1376,8 @@ footer {
 
 /* ── COUNTER ─────────────────────────────────────── */
 .count-num {
-    font-family: var(--font-head);
+    /* font-family: var(--font-head); */
+    font-family: 'Inter', sans-serif;
 }
 
 /* ── RESPONSIVE ─────────────────────────────────── */
@@ -1773,10 +1775,11 @@ footer {
     color: #6C757D;
     line-height: 1.5;
 } */
- 
+
 .values-grid {
     display: grid;
-    grid-template-columns: 1fr; /* One by one rows */
+    grid-template-columns: 1fr;
+    /* One by one rows */
     gap: 12px;
     margin-top: 24px;
 }
@@ -1787,7 +1790,8 @@ footer {
     border-radius: 10px;
     padding: 12px 18px;
     display: flex;
-    align-items: center; /* Vertically center items */
+    align-items: center;
+    /* Vertically center items */
     gap: 15px;
     transition: all 0.3s ease;
 }
@@ -1818,11 +1822,12 @@ footer {
     font-size: 0.9rem;
     color: #0B1F3A;
     /* Fixed width for alignment */
-    width: 160px; 
+    width: 160px;
     min-width: 160px;
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Remove bottom margin for side-by-side */
+    margin-bottom: 0;
+    /* Remove bottom margin for side-by-side */
 }
 
 .vp-name i {
@@ -1832,8 +1837,10 @@ footer {
 .vp-desc {
     font-size: 0.82rem;
     color: #6C757D;
-    flex: 1; /* Occupies remaining space */
-    border-left: 1px solid #eee; /* Optional: subtle separator */
+    flex: 1;
+    /* Occupies remaining space */
+    border-left: 1px solid #eee;
+    /* Optional: subtle separator */
     padding-left: 15px;
     line-height: 1.4;
 }
@@ -1844,10 +1851,12 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .vp-name {
         width: 100%;
         margin-bottom: 5px;
     }
+
     .vp-desc {
         border-left: none;
         padding-left: 0;
@@ -1855,7 +1864,7 @@ footer {
 }
 
 /* Stat strip */
-.stat-strip {
+/* .stat-strip {
     display: flex;
     gap: 0;
     background: #ffffff;
@@ -1893,7 +1902,60 @@ footer {
     font-size: .73rem;
     color: #6C757D;
     margin-top: 4px;
+} */
+
+.stat-strip {
+    display: flex;
+    background: #ffffff; 
+    border-radius: 12px;
+    margin-top: 32px;
+    padding: 10px 0;
 }
+
+.stat-strip-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-strip-item:last-child { border-right: none; }
+
+.ss-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.2rem; 
+    font-weight: 900;
+    /* color: #ffffff; */
+    color:#0B1F3A;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:768px) {
+    .ss-num {
+        font-size: 20px;
+    }
+}
+
+.ss-symbol {
+    font-size: 1.2rem;
+    margin-left: 4px;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.ss-lbl {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0B1F3A; 
+    margin-top: 8px;
+}
+
+
+
+
 
 /* ═══════════════════════════════════════════════════
        WHAT WE DO / SERVICES SECTION
@@ -2275,7 +2337,7 @@ footer {
 
 body {
     /* font-family: var(--font-body); */
-    font-family:"Poppins", sans-serif !important ;
+    font-family: "Poppins", sans-serif !important;
 }
 
 h1,
@@ -2284,7 +2346,7 @@ h3,
 h4,
 h5 {
     /* font-family: var(--font-head); */
-    font-family:"Poppins", sans-serif !important ;
+    font-family: "Poppins", sans-serif !important;
 }
 
 /* PAGE BACKGROUND */
@@ -2681,7 +2743,7 @@ h5 {
 .solar-service-stats-strip {
     background: var(--navy);
     border-radius: var(--radius-lg);
-    padding: 36px 40px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -2694,7 +2756,8 @@ h5 {
 }
 
 .solar-service-stat-num {
-    font-family: var(--font-head);
+    /* font-family: var(--font-head); */
+    font-family: 'Inter', sans-serif;
     font-size: 2.2rem;
     font-weight: 800;
     color: var(--sun);
@@ -2765,7 +2828,7 @@ h5 {
     background: linear-gradient(135deg, #1a7a4a8b 0%, #0d3d20ce 100%);
     /* background: linear-gradient(135deg, var(--leaf) 0%, #0d3d20 100%); */
     border-radius: var(--radius-lg);
-    padding: 52px 48px;
+    padding: 20px 48px;
     margin-top: 72px;
     display: flex;
     align-items: center;
@@ -4388,7 +4451,7 @@ h5 {
 /* About New Section Styles */
 .get-new-section-wrapper,
 .contact-new-section-wrapper,
-.gallery-new-section-wrapper ,
+.gallery-new-section-wrapper,
 .service-new-section-wrapper,
 .about-new-section-wrapper {
 
@@ -4404,18 +4467,20 @@ h5 {
     /* Banner height ni ikkada adjust cheshanu */
     overflow: hidden;
 }
-.contact-new-section-wrapper{
-   
+
+.contact-new-section-wrapper {
+
     background-image: url('../img/battery_storage.png');
 }
 
 .about-new-section-wrapper {
     /* Me image path ikkada correct ga ivvandi */
     /* background-image: url('../img/battery_storage.png'); */
-     background-image: url('../img/gallery_2.png');
+    background-image: url('../img/gallery_2.png');
 }
+
 .gallery-new-section-wrapper {
-     background-image: url('../img/gallery_1.png');
+    background-image: url('../img/gallery_1.png');
 }
 
 .service-new-section-wrapper {
@@ -4423,7 +4488,8 @@ h5 {
     background-image: url('../img/sss.png');
 
 }
-.get-new-section-wrapper{
+
+.get-new-section-wrapper {
     background-image: url('../img/gallery_3.png');
 }
 
@@ -4476,148 +4542,150 @@ h5 {
 
 
 /* new navbar  */
-   /* NAVBAR */
-        .nabhas_solor_new_navbar {
-            width: 100%;
-            background: #fff;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
+/* NAVBAR */
+.nabhas_solor_new_navbar {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 
-        /* CONTAINER */
-        .nabhas_solor_new_navbar_container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 30px;
-        }
+/* CONTAINER */
+.nabhas_solor_new_navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
 
-        /* LOGO */
-        .nabhas_solor_new_navbar_logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+/* LOGO */
+.nabhas_solor_new_navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-        .nabhas_solor_new_navbar_logo span {
-            background: black;
-            color: white;
-            padding: 10px 14px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 16px;
-        }
+.nabhas_solor_new_navbar_logo span {
+    background: black;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        .nabhas_solor_new_navbar_logo h2 {
-            font-size: 20px;
-            color: black;
-        }
+.nabhas_solor_new_navbar_logo h2 {
+    font-size: 20px;
+    color: black;
+}
 
-        /* MENU */
-        .nabhas_solor_new_navbar_menu ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            align-items: center;
-        }
+/* MENU */
+.nabhas_solor_new_navbar_menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
 
-        .nabhas_solor_new_navbar_menu ul li a {
-            text-decoration: none;
-            color: black;
-            font-size: 16px;
-            padding: 10px 16px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
+.nabhas_solor_new_navbar_menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
 
-        /* HOVER */
-        .nabhas_solor_new_navbar_menu ul li a:hover {
-            background: black;
-            color: white;
-        }
+/* HOVER */
+.nabhas_solor_new_navbar_menu ul li a:hover {
+    background: black;
+    color: white;
+}
 
-        /* 🔥 ACTIVE MENU */
-        .nabhas_solor_new_navbar_menu ul li a.active {
+/* 🔥 ACTIVE MENU */
+/* .nabhas_solor_new_navbar_menu ul li a.active {
             background: #f2f2f2;
-            /* light background */
+            
             color: black;
             font-weight: 600;
-        }
+        } */
 
-        /* BUTTON */
-        .nabhas_solor_new_navbar_btn {
-            background: black;
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 25px;
-        }
+/* BUTTON */
+.nabhas_solor_new_navbar_btn {
+    background: black;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
 
-        /* HAMBURGER */
-        .nabhas_solor_new_navbar_toggle {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-        }
+/* HAMBURGER */
+.nabhas_solor_new_navbar_toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
 
-        /* CLOSE BUTTON */
-        .nabhas_solor_new_navbar_close {
-            display: none;
-        }
+/* CLOSE BUTTON */
+.nabhas_solor_new_navbar_close {
+    display: none;
+}
 
-        /* MOBILE VIEW */
-        @media (max-width: 992px) {
+/* MOBILE VIEW */
+@media (max-width: 992px) {
 
-            .nabhas_solor_new_navbar_toggle {
-                display: block;
-            }
+    .nabhas_solor_new_navbar_toggle {
+        display: block;
+    }
 
-            .nabhas_solor_new_navbar_menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 260px;
-                height: 100%;
-                background: white;
-                transition: 0.3s;
-                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-            }
+    .nabhas_solor_new_navbar_menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100%;
+        background: white;
+        transition: 0.3s;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
 
-            .nabhas_solor_new_navbar_menu.active {
-                right: 0;
-            }
+    .nabhas_solor_new_navbar_menu.active {
+        right: 0;
+    }
 
-            .nabhas_solor_new_navbar_menu ul {
-                flex-direction: column;
-                margin-top: 60px;
-                gap: 20px;
-            }
+    .nabhas_solor_new_navbar_menu ul {
+        flex-direction: column;
+        margin-top: 60px;
+        gap: 20px;
+    }
 
-            .nabhas_solor_new_navbar_close {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                font-size: 22px;
-                cursor: pointer;
-                font-weight: bold;
-            }
-        }
+    .nabhas_solor_new_navbar_close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 22px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
 
 
-        /* index page video section   */
-        .index_main_video_slider_section {
+/* index page video section   */
+/* .index_main_video_slider_section {
     padding: 20px 0;
-    background: #f8f9fa; /* Optional background color */
+    background: #f8f9fa;
+ 
 }
 
 .index_main_video_slider_card {
     border-radius: 12px;
-    overflow: hidden; /* Rounded corners apply avvadaniki */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+   
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     background: #000;
     display: flex;
     align-items: center;
@@ -4628,19 +4696,139 @@ h5 {
     display: block;
     width: 100%;
     height: auto;
-    /* Video frame cut avvakunda motham kanipinchali ante */
-    object-fit: contain; 
+   
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for a premium look */
+
 .index_main_video_slider_card:hover video {
     transform: scale(1.02);
 }
 
-/* Mobile adjustments */
+
 @media (max-width: 768px) {
     .index_main_video_slider_card {
         margin-bottom: 10px;
     }
+} */
+.nabhas_solor_new_navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.navbar_logo_img {
+    height: 80px;
+    width: auto;
+}
+
+.nabhas_solor_new_navbar_menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    align-items: center;
+}
+
+/* --- Toggle Bar Fix (The Hamburger) --- */
+.nabhas_solor_new_navbar_toggle {
+    display: none; /* Desktop lo hidden */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Hamburger lines styling */
+.nabhas_solor_new_navbar_toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000; /* Icon color Black */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* --- Mobile View (992px and below) --- */
+@media (max-width: 992px) {
+    .nabhas_solor_new_navbar_toggle {
+        display: flex; /* Mobile lo kanipisthadi */
+    }
+
+    .nabhas_solor_new_navbar_menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially hidden */
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        z-index: 2000;
+        transition: 0.4s cubic-bezier(0.1, 0.7, 0.6, 1);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding: 40px 20px;
+    }
+
+    .nabhas_solor_new_navbar_menu.active {
+        right: 0; /* Menu open state */
+    }
+
+    .nabhas_solor_new_navbar_menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .nabhas_solor_new_navbar_menu ul li {
+        width: 100%;
+    }
+
+    .nabhas_solor_new_navbar_menu ul li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nabhas_solor_new_navbar_close {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.index_main_video_slider_section {
+    overflow: hidden;
+    background: #000; /* Video borders cover cheyadaniki black background */
+}
+
+.index_main_video_slider {
+    width: 100%;
+}
+
+.index_main_video_slider_card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index_main_video_slider_card video {
+    width: 100%;
+    max-height: 90vh; /* Screen height kante ekkuva avvakunda */
+    display: block;
+    /* Video content motham kanipinchali ante 'contain' best */
+    object-fit: contain; 
+}
+
+/* Pagination Styling */
+.index_main_video_slider .swiper-pagination-bullet-active {
+    background: #1A7A4A; /* Your theme color */
 }
