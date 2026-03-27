@@ -200,7 +200,7 @@
             </div>
           </a>
           <!-- <a href="get_in_touch.php" class="btn-sun"><i class="bi bi-lightning-fill me-2"></i>Download Solar Broucher</a> -->
-          <a href="service.php" class="btn-outline-white"><i class="bi bi-play-circle me-2"></i>Our Services</a>
+          <!-- <a href="service.php" class="btn-outline-white"><i class="bi bi-play-circle me-2"></i>Our Services</a> -->
         </div>
         <div class="hero-stats">
           <div>
