@@ -67,7 +67,7 @@
     border: 1px solid var(--border-color);
     font-weight: 600;
     border-radius: 24px;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   }
 
