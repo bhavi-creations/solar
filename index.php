@@ -132,7 +132,7 @@
       <div class="swiper-slide">
         <div class="index_main_video_slider_card">
           <video muted playsinline controls preload="auto" class="w-100 h-auto">
-            <source src="./assets/img/nabhas_2.mp4" type="video/mp4">
+            <source src="./assets/img/elite.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <div class="video_overlay">
@@ -514,9 +514,9 @@
           </div>
           <div class="new_index_service_section__content-box">
             <h3 class="new_index_service_section__service-title">Elite Edible Oil and Fuel Pvt. Ltd (Industrial)</h3>
-            <p class="new_index_service_section__service-desc">
+            <!-- <p class="new_index_service_section__service-desc">
               A high-scale industrial installation completed within 45 days. It includes full engineering scope, from site survey to CEIG safety clearances and Bi-Directional Net Metering (APEPDCL), ensuring massive energy savings for the factory.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -528,9 +528,9 @@
           </div>
           <div class="new_index_service_section__content-box">
             <h3 class="new_index_service_section__service-title">Rotary Old Age Home & Deepu Engineering (Commercial)</h3>
-            <p class="new_index_service_section__service-desc">
+            <!-- <p class="new_index_service_section__service-desc">
               Customized solar solutions for non-residential spaces. These projects focus on reducing operational costs for offices and social organizations while maintaining a stable and clean power supply.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -542,9 +542,10 @@
           </div>
           <div class="new_index_service_section__content-box">
             <h3 class="new_index_service_section__service-title">Avani heights 1KW - 5KW Solar (Site) kakinada (Residential)</h3>
-            <p class="new_index_service_section__service-desc">
-              Keep your solar panels running at peak efficiency with our regular maintenance checks and performance monitoring systems.
-            </p>
+            <!-- <p class="new_index_service_section__service-desc">
+              Switch to smarter, cleaner energy with Avani Heights solar systems (1KW–5KW).
+              Reliable and cost-effective solutions by Nabhas Solar for homes and small businesses
+            </p> -->
           </div>
         </div>
       </div>
