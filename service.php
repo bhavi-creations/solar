@@ -8,10 +8,10 @@
                 <div class="col-12 text-center text-white">
                     <h1 class="about-new-section-title fw-bold"> Our Services</h1>
                     <div class="about-new-section-divider mx-auto"></div>
-                    <p class="about-new-section-description fs-10 mt-3">
+                    <!-- <p class="about-new-section-description fs-10 mt-3">
                         We provide complete solar solutions including system design, installation, <br>
                         approvals, and long-term maintenance for residential, commercial, and industrial projects
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </div>

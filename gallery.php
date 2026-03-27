@@ -8,9 +8,9 @@
         <div class="col-12 text-center text-white">
           <h1 class="about-new-section-title fw-bold">Our Projects</h1>
           <div class="about-new-section-divider mx-auto"></div>
-          <p class="about-new-section-description fs-5 mt-3">
+          <!-- <p class="about-new-section-description fs-5 mt-3">
             Explore our completed solar installations across residential, commercial, and industrial sectors
-          </p>
+          </p> -->
         </div>
       </div>
     </div>

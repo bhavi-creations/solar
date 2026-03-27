@@ -8,10 +8,10 @@
         <div class="col-12 text-center text-white">
           <h1 class="about-new-section-title fw-bold">About Us</h1>
           <div class="about-new-section-divider mx-auto"></div>
-          <p class="about-new-section-description fs-5 mt-3">
+          <!-- <p class="about-new-section-description fs-5 mt-3">
             End-to-end solar solutions for residential, commercial, <br>
             and industrial projects with 400+ successful installations
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
