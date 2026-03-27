@@ -147,7 +147,7 @@
       <div class="swiper-slide">
         <div class="index_main_video_slider_card">
           <video muted playsinline controls preload="auto" class="w-100 h-auto">
-            <source src="./assets/img/nabhas_1.mp4" type="video/mp4">
+            <source src="./assets/img/website video.mp4" type="video/mp4">
           </video>
           <div class="video_overlay">
             <div class="overlay_content">
