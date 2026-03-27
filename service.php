@@ -73,9 +73,10 @@
                                 <h3 class="solar-service-name">Residential Solar</h3>
                                 <p class="solar-service-desc">Nabhas Solar provides high-efficiency rooftop systems tailored to meet your household energy needs. We handle everything from government subsidies (PM Surya Ghar) to final installation, ensuring your transition to clean energy is seamless and stress-free.</p>
                                 <div class="solar-service-pills">
+                                     <span class="solar-service-pill">5 Years Maintenance</span>
                                     <span class="solar-service-pill">90% Bill Reduction</span>
                                     <span class="solar-service-pill">30-Year Warranty</span>
-                                    <span class="solar-service-pill">Subsidy Support</span>
+                                    <!-- <span class="solar-service-pill">Subsidy Support</span> -->
                                 </div>
                                 <div class="solar-service-divider"></div>
                                 <!-- <a href="#" class="solar-service-cta">Learn More <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span></a> -->
@@ -98,6 +99,7 @@
                                 <div class="solar-service-pills">
                                     <span class="solar-service-pill">Accelerated Payback</span>
                                     <span class="solar-service-pill">Tax Benefits</span>
+                                     <span class="solar-service-pill">5 Years Maintenance</span>
                                 </div>
                                 <div class="solar-service-divider"></div>
                                 <!-- <a href="#" class="solar-service-cta">Learn More <span class="arrow-icon"><i class="bi bi-arrow-right"></i></span></a> -->
