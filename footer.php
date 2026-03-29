@@ -626,4 +626,26 @@
      </script>
 </footer>
 
+<!-- same page refresh   -->
+ <script>
+document.getElementById("freeQuoteForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // page reload stop
+
+    let formData = new FormData(this);
+
+    fetch("appointmentform.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Quote request submitted successfully!");
+        document.getElementById("freeQuoteForm").reset();
+    })
+    .catch(error => {
+        alert("Something went wrong. Please try again.");
+        console.error(error);
+    });
+});
+</script>
 <!-- ===== NABHAS SOLAR FOOTER END ===== -->

@@ -891,51 +891,83 @@
     <div class="row">
       <div class="col-lg-7 fade-up">
         <div class="contact-form-wrap">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">First Name</label>
-              <input type="text" class="form-control" placeholder="name" />
-            </div>
-            <!-- <div class="col-md-6">
-                <label class="form-label">Last Name</label>
-                <input type="text" class="form-control" placeholder="Smith" />
-              </div> -->
-            <div class="col-md-6">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" placeholder="@gmail.com" />
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" placeholder="+91 9876543210" />
-            </div>
-            <!-- <div class="col-md-6">
-                <label class="form-label">Property Type</label>
-                <select class="form-select">
-                  <option value="">Select type…</option>
-                  <option>Residential Home</option>
-                  <option>Commercial Building</option>
-                  <option>Industrial Facility</option>
-                  <option>Agricultural Land</option>
+          <form action="contactform.php" method="post" role="form" class="php-email-form">
+
+            <div class="row g-3">
+
+              <div class="col-md-6">
+
+                <label class="form-label">Your Name</label>
+
+                <input type="text" name="contactname" class="form-control solar-contact-form-control" placeholder="Enter Full Name"
+                  required>
+
+              </div>
+
+              <div class="col-md-6">
+
+                <label class="form-label">Phone Number</label>
+
+                <input type="tel" name="contactnumber" class="form-control solar-contact-form-control" placeholder="Enter Mobile Number"
+                  required>
+
+              </div>
+
+              <div class="col-md-12">
+
+                <label class="form-label">Email Address</label>
+
+                <input type="email" name="contactemail" class="form-control solar-contact-form-control" placeholder="example@mail.com"
+                  required>
+
+              </div>
+
+              <div class="col-md-12">
+                <label class="form-label" for="property_select">Property Type</label>
+                <select name="property" id="property_select" class="form-select solar-contact-form-control" required>
+                  <option value="" selected disabled>Select Property Type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Industrial">Industrial</option>
+                </select>
+              </div>
+
+              <!-- <div class="col-md-12">
+                <label class=" form-label " for="property_select">Property Type</label>
+                <select name="property" id="property_select" class="free_quotes__input" required>
+                  <option value="" selected disabled>Select Property Type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Industrial">Industrial</option>
                 </select>
               </div> -->
-            <div class="col-md-6">
-              <label class="form-label">Service Interested In</label>
-              <select class="form-select">
-                <option value="">Select service…</option>
-                <option>Solar Installation</option>
-                <option>Battery Storage</option>
-                <option>Maintenance</option>
-                <option>Energy Consultation</option>
-              </select>
+
+
+              <div class="col-md-12">
+
+                <label class="form-label">Message</label>
+
+                <textarea class="form-control solar-contact-form-control" name="contactmessage" rows="5"
+                  placeholder="How can we help you?"></textarea>
+
+              </div>
+
+
+
+              <div class="col-12 mt-4">
+
+                <button type="submit" class="solar-contact-btn-submit">
+
+                  SUBMIT REQUEST <i class="bi bi-send-fill ms-2"></i>
+
+                </button>
+
+              </div>
+
+
             </div>
-            <div class="col-12">
-              <label class="form-label">Message</label>
-              <textarea class="form-control" rows="4" placeholder="Tell us about your energy needs, property size, or any questions you have…"></textarea>
-            </div>
-            <div class="col-12">
-              <button class="btn-submit"><i class="bi bi-send-fill me-2"></i>Send Meassage</button>
-            </div>
-          </div>
+
+          </form>
         </div>
       </div>
 
@@ -1422,4 +1454,6 @@
     }
   });
 </script>
+
+
 <?php include 'footer.php'; ?>

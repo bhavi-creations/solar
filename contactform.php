@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contactname = $_POST['contactname'] ?? '';
     $contactemail = $_POST['contactemail'] ?? '';
     $contactsubject = $_POST['address'] ?? '';
+    $propertytype = $_POST['property'] ?? '';
     $contactnumber = $_POST['contactnumber'] ?? '';
     $contactmessage = $_POST['contactmessage'] ?? '';
 
@@ -24,32 +25,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'manimalladi05@gmail.com'; // Your Gmail email address
-        $mail->Password = 'ltlxupjfqbobegqg'; // Your Gmail password
+        $mail->Password = 'ngaekuqfbllvquny'; // Your Gmail App Password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('manimalladi05@gmail.com', 'Nabhas Solar' ); // Your Gmail email and name
-        $mail->addAddress('manimalladi05@gmail.com', 'Nabhas Solar'); // Recipient's email and name
+        $mail->setFrom('manimalladi05@gmail.com', 'Nabhas Solar');
+        $mail->addAddress('manimalladi05@gmail.com', 'Nabhas Solar');
 
         // Content
         $mail->isHTML(true);
         $mail->Subject = 'New Message from Contact Form';
         $mail->Body = "
-           
             <h1>Contact Details</h1>
             <p><strong>Name:</strong> $contactname</p>
             <p><strong>Email:</strong> $contactemail</p>
-            <p><strong>Address:</strong> $contactsubject</p>
+        
+            <p><strong>Property Type:</strong> $propertytype</p>
             <p><strong>Phone:</strong> $contactnumber</p>
-            <p><strong>Message:</strong>$contactmessage</p>
+            <p><strong>Message:</strong> $contactmessage</p>
         ";
 
         $mail->send();
-        echo '<script> window.alert("Message has been sent.\n\nPlease click OK."); window.location.href="index.php";</script>';
+        echo '<script>
+                window.alert("Message has been sent.\n\nPlease click OK.");
+                window.location.href="index.php";
+              </script>';
+
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
+
 } else {
     // If accessed directly without POST data
     echo 'Access Denied';

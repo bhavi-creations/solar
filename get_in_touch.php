@@ -1,8 +1,3 @@
-
-
-
-
-
 <style>
   /* ── BLACK & WHITE DESIGN TOKENS ─────────────────────────── */
   :root {
@@ -199,7 +194,7 @@
 
       <div class="col-lg-12">
         <div class="free_quotes__card">
-             <h1>Get a Free Quote</h1>
+          <h1>Get a Free Quote</h1>
           <!-- <form action="appointmentform.php" method="post" id="freeQuoteForm">
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -301,4 +296,3 @@
     </div>
   </div>
 </section>
-

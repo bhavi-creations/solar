@@ -117,7 +117,7 @@
 
               <p class="text-muted mb-0">
 
-               nabhassolar@gmail.com
+                nabhassolar@gmail.com
               </p>
 
             </div>
@@ -137,7 +137,7 @@
 
           <h2 class="mb-4">Send us a <span>Message</span></h2>
 
-          <form action="contactform .php" method="post" role="form" class="php-email-form">
+          <form action="contactform.php" method="post" role="form" class="php-email-form">
 
             <div class="row g-3">
 
@@ -145,7 +145,7 @@
 
                 <label class="form-label">Your Name</label>
 
-                <input type="text" class="form-control solar-contact-form-control" placeholder="Enter Full Name"
+                <input type="text" name="contactname" class="form-control solar-contact-form-control" placeholder="Enter Full Name"
                   required>
 
               </div>
@@ -154,7 +154,7 @@
 
                 <label class="form-label">Phone Number</label>
 
-                <input type="tel" class="form-control solar-contact-form-control" placeholder="Enter Mobile Number"
+                <input type="tel" name="contactnumber" class="form-control solar-contact-form-control" placeholder="Enter Mobile Number"
                   required>
 
               </div>
@@ -163,35 +163,37 @@
 
                 <label class="form-label">Email Address</label>
 
-                <input type="email" class="form-control solar-contact-form-control" placeholder="example@mail.com"
+                <input type="email" name="contactemail" class="form-control solar-contact-form-control" placeholder="example@mail.com"
                   required>
 
               </div>
 
               <div class="col-md-12">
-
-                <label class="form-label">Interested In</label>
-
-                <select class="form-select solar-contact-form-control">
-
-                  <option selected disabled>Choose a service</option>
-
-                  <option>Residential Solar</option>
-
-                  <option>Commercial Solar</option>
-
-                  <option>Solar Maintenance</option>
-
+                <label class="form-label" for="property_select">Property Type</label>
+                <select name="property" id="property_select" class="form-select solar-contact-form-control" required>
+                  <option value="" selected disabled>Select Property Type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Industrial">Industrial</option>
                 </select>
-
               </div>
+
+              <!-- <div class="col-md-12">
+                <label class=" form-label " for="property_select">Property Type</label>
+                <select name="property" id="property_select" class="free_quotes__input" required>
+                  <option value="" selected disabled>Select Property Type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Industrial">Industrial</option>
+                </select>
+              </div> -->
 
 
               <div class="col-md-12">
 
                 <label class="form-label">Message</label>
 
-                <textarea class="form-control solar-contact-form-control" rows="5"
+                <textarea class="form-control solar-contact-form-control" name="contactmessage" rows="5"
                   placeholder="How can we help you?"></textarea>
 
               </div>
@@ -233,6 +235,8 @@
 
 
   </div>
+
+  
 
 </section>
 
