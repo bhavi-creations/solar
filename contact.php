@@ -137,35 +137,26 @@
 
           <h2 class="mb-4">Send us a <span>Message</span></h2>
 
-          <form action="contactform.php" method="post" role="form" class="php-email-form">
+          <form method="post" role="form" class="php-email-form" id="contactFormAjax">
 
             <div class="row g-3">
 
               <div class="col-md-6">
-
                 <label class="form-label">Your Name</label>
-
-                <input type="text" name="contactname" class="form-control solar-contact-form-control" placeholder="Enter Full Name"
-                  required>
-
+                <input type="text" name="contactname" class="form-control solar-contact-form-control"
+                  placeholder="Enter Full Name" required>
               </div>
 
               <div class="col-md-6">
-
                 <label class="form-label">Phone Number</label>
-
-                <input type="tel" name="contactnumber" class="form-control solar-contact-form-control" placeholder="Enter Mobile Number"
-                  required>
-
+                <input type="tel" name="contactnumber" class="form-control solar-contact-form-control"
+                  placeholder="Enter Mobile Number" required>
               </div>
 
               <div class="col-md-12">
-
                 <label class="form-label">Email Address</label>
-
-                <input type="email" name="contactemail" class="form-control solar-contact-form-control" placeholder="example@mail.com"
-                  required>
-
+                <input type="email" name="contactemail" class="form-control solar-contact-form-control"
+                  placeholder="example@mail.com" required>
               </div>
 
               <div class="col-md-12">
@@ -178,42 +169,51 @@
                 </select>
               </div>
 
-              <!-- <div class="col-md-12">
-                <label class=" form-label " for="property_select">Property Type</label>
-                <select name="property" id="property_select" class="free_quotes__input" required>
-                  <option value="" selected disabled>Select Property Type</option>
-                  <option value="Residential">Residential</option>
-                  <option value="Commercial">Commercial</option>
-                  <option value="Industrial">Industrial</option>
-                </select>
-              </div> -->
-
-
               <div class="col-md-12">
-
                 <label class="form-label">Message</label>
-
                 <textarea class="form-control solar-contact-form-control" name="contactmessage" rows="5"
                   placeholder="How can we help you?"></textarea>
-
               </div>
-
-
 
               <div class="col-12 mt-4">
-
                 <button type="submit" class="solar-contact-btn-submit">
-
                   SUBMIT REQUEST <i class="bi bi-send-fill ms-2"></i>
-
                 </button>
-
               </div>
 
+              <div class="col-12">
+                <div id="contactSuccessMsg" class="alert alert-success mt-3" style="display:none;">
+                  thank you for consulting Nabhas Solar
+                </div>
+              </div>
 
             </div>
-
           </form>
+          <script>
+            document.getElementById("contactFormAjax").addEventListener("submit", function(e) {
+              e.preventDefault();
+
+              let formData = new FormData(this);
+
+              fetch("contactform.php", {
+                  method: "POST",
+                  body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById("contactSuccessMsg").style.display = "block";
+                  document.getElementById("contactFormAjax").reset();
+
+                  setTimeout(() => {
+                    document.getElementById("contactSuccessMsg").style.display = "none";
+                  }, 3000);
+                })
+                .catch(error => {
+                  alert("Something went wrong.");
+                  console.error(error);
+                });
+            });
+          </script>
 
         </div>
 
@@ -236,12 +236,63 @@
 
   </div>
 
-  
+
 
 </section>
 
+<!-- TOP POPUP MESSAGE -->
+<div id="contactSuccessMsg" style="
+  display:none;
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#28a745;
+  color:#fff;
+  padding:12px 25px;
+  border-radius:6px;
+  z-index:9999;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  font-weight:500;
+">
+  ✅ Thank you for contacting Nabhas Solar
+</div>
 
+<script>
+document.getElementById("contactFormAjax").addEventListener("submit", function(e) {
+  e.preventDefault();
 
+  let form = this;
+  let formData = new FormData(form);
 
+  fetch("contactform.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+
+    if (data.trim() === "success") {
+
+      let msg = document.getElementById("contactSuccessMsg");
+      msg.style.display = "block";
+
+      form.reset();
+
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 3000);
+
+    } else {
+      alert("thank you for consulting nabhas solar");
+    }
+
+  })
+  .catch(error => {
+    alert("Error occurred");
+    console.error(error);
+  });
+});
+</script>
 
 <?php include 'footer.php'; ?>

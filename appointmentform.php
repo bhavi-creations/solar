@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'manimalladi05@gmail.com';
-        $mail->Password   = 'ngaekuqfbllvquny';
+        $mail->Username   = 'nabhassolar@nabhasconstruction.com';
+        $mail->Password   = 'efafapdpyowzqemf';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
@@ -38,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             )
         );
 
-        $mail->setFrom('manimalladi05@gmail.com', 'Solar Quote Request');
-        $mail->addAddress('manimalladi05@gmail.com', 'Admin Notification');
+        $mail->setFrom('nabhassolar@nabhasconstruction.com', 'Solar Quote Request');
+        $mail->addAddress('nabhassolar@nabhasconstruction.com', 'Admin Notification');
 
         $mail->isHTML(true);
         $mail->Subject = 'New Quote Request - ' . $name;
@@ -64,10 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ";
 
         if ($mail->send()) {
-            echo '<script>
-                    alert("Thank you! You successfully applied.");
-                    window.location.href="index.php";
-                  </script>';
+           
         }
 
     } catch (Exception $e) {

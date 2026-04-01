@@ -891,7 +891,7 @@
     <div class="row">
       <div class="col-lg-7 fade-up">
         <div class="contact-form-wrap">
-          <form action="contactform.php" method="post" role="form" class="php-email-form">
+          <form id="contactForm" method="post" role="form" class="php-email-form">
 
             <div class="row g-3">
 
@@ -1007,6 +1007,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // page reload stop
+
+    let formData = new FormData(this);
+
+    fetch("contactform.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert("thank you for consulting nabhas solar");
+        document.getElementById("contactForm").reset(); // clear form
+      })
+      .catch(error => {
+        alert("Something went wrong!");
+      });
+  });
+</script>
 
 
 <!-- faq section   -->
