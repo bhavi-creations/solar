@@ -346,11 +346,11 @@
             <button type="submit" class="free_quotes__submit">Request Quote</button>
           </form>
 
-          
+
 
         </div>
       </div>
-      <script>
+      <!-- <script>
         document.getElementById("freeQuoteForm").addEventListener("submit", function(e) {
           e.preventDefault();
 
@@ -371,7 +371,8 @@
             })
             
         });
-      </script>
+      </script> -->
     </div>
   </div>
 </section>
+

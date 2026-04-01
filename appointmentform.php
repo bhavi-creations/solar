@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $name       = $_POST['name'] ?? 'Not provided';
+       $name       = $_POST['name'] ?? 'Not provided';
     $mobile     = $_POST['mobile'] ?? 'Not provided';
     $location   = $_POST['location'] ?? 'Not provided';
     $message    = $_POST['message'] ?? 'No message';
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $mail->Body = "
             <div style='font-family: Arial, sans-serif; border: 1px solid #ddd; padding: 20px; border-radius: 10px;'>
-                <h2 style='color: #2d3436;'>New Quote Request Details</h2>
+                <h2 style='color: #2d3436;'>Nabhas Solar Quote Request Details</h2>
 
                 <p><strong>Full Name:</strong> $name</p>
                 <p><strong>Mobile:</strong> $mobile</p>

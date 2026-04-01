@@ -884,7 +884,7 @@
   <div class="container">
     <div class="text-center mb-5 fade-up">
       <div class="section-tag"><i class="bi bi-envelope-fill me-1"></i> Contact Us</div>
-      <h2 class="section-title">Solar energy <span>The power of</span>the future</h2>
+      <h2 class="section-title">Solar energy <span>The power of</span> the future</h2>
       <div class="divider"></div>
       <!-- <p class="section-sub mx-auto">Ready to go solar? Fill out the form below and one of our experts will reach out within 24 hours.</p> -->
     </div>
@@ -1033,7 +1033,7 @@
 <!-- faq section   -->
 <section>
   <div class="container">
-    <h2 class="section-title text-center mb-3">Frequently <span>Ask</span>Question (FAQ)</h2>
+    <h2 class="section-title text-center mb-3">Frequently <span>Ask</span> Question (FAQ)</h2>
     <!-- <h1 class="text-center">  </h1> -->
     <div class="row">
       <div class="col-12 col-md-6">
@@ -1268,9 +1268,6 @@
 
 
 
-
-
-<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
 <!-- <footer>
   <div class="container">
     <div class="row g-5">
