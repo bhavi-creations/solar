@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -6,7 +7,7 @@ require 'vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-       $name       = $_POST['name'] ?? 'Not provided';
+    $name       = $_POST['name'] ?? 'Not provided';
     $mobile     = $_POST['mobile'] ?? 'Not provided';
     $location   = $_POST['location'] ?? 'Not provided';
     $message    = $_POST['message'] ?? 'No message';
@@ -63,15 +64,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         ";
 
-        if ($mail->send()) {
-           
-        }
+        // if ($mail->send()) {
+        //      echo '<script> window.alert("Message has been sent.\n\nPlease click OK."); window.location.href="index.php";</script>';
 
+        // }
+
+
+
+
+        if ($mail->send()) {
+            // Ee okka mata matrame PHP nundi vellali
+            echo "success";
+            exit;
+        }
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
-
 } else {
     echo "Direct access not allowed.";
 }
-?>

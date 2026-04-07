@@ -258,6 +258,7 @@
                                         <li><a href="about.php">About Us</a></li>
                                         <li><a href="service.php">Service</a></li>
                                         <li><a href="gallery.php">Project</a></li>
+                                        <li><a href="blogs.php">Blogs</a></li>
                                         <li><a href="contact.php">Contact</a></li>
                                         <li><a href="tel:+918341950894" class="nabhas_solor_new_navbar_btn">+91 8341950894</a></li>
                                 </ul>

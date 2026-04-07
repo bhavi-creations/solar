@@ -195,58 +195,10 @@
       <div class="col-lg-12">
         <div class="free_quotes__card">
           <h1>Get a Free Quote</h1>
-          <!-- <form action="appointmentform.php" method="post" id="freeQuoteForm">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="free_quotes__label">Full Name</label>
-                                <input type="text" name="name" class="free_quotes__input" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="free_quotes__label">Mobile Number</label>
-                                <input type="tel" name="mobile" class="free_quotes__input" placeholder="Mobile Number" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="free_quotes__label">Location</label>
-                            <input type="text" name="location" class="free_quotes__input" placeholder="City / Area" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="free_quotes__label">Monthly Electricity Bill</label>
-                            <div class="free_quotes__radio-grid">
-                                <input type="radio" name="bill" id="b1" value="<1000"><label for="b1">< ₹1000</label>
-                                <input type="radio" name="bill" id="b1" value="1000–2000"><label for="b5">< ₹1000–2000</label>
-                                <input type="radio" name="bill" id="b2" value="2000–3000"><label for="b2">₹2000–3000</label>
-                                <input type="radio" name="bill" id="b3" value="3000–5000"><label for="b3">₹3000–5000</label>
-                                <input type="radio" name="bill" id="b3" value="₹5000–10000"><label for="b6">₹5000–10000</label>
-                                <input type="radio" name="bill" id="b4" value="> ₹10000"><label for="b4">> ₹10000</label>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="free_quotes__label">Property Type</label>
-                            <div class="free_quotes__prop-grid">
-                                <input type="radio" name="prop" id="p1" value="Resi"><label for="p1">Residential</label>
-                                <input type="radio" name="prop" id="p2" value="Comm"><label for="p2">Commercial</label>
-                                <input type="radio" name="prop" id="p3" value="Indus"><label for="p3">Industrial</label>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <label class="free_quotes__label">Message (Optional)</label>
-                            <textarea name="message" class="free_quotes__textarea" rows="2" placeholder="Tell us more..."></textarea>
-                        </div>
-
-                        <button type="submit" class="free_quotes__submit">Request Quote</button>
-                    </form> -->
-
-          <!-- <form action="appointmentform.php" method="post" id="freeQuoteForm"> -->
 
 
-
-
-          <!-- <form action="appointmentform.php" method="post" id="freeQuoteForm">
+          <!-- <form action="appointmentform.php" method="post"> -->
+            <form id="freeQuoteForm" action="appointmentform.php" method="post">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label class="free_quotes__label">Full Name</label>
@@ -292,87 +244,76 @@
             </div>
 
             <button type="submit" class="free_quotes__submit">Request Quote</button>
-          </form> -->
-
-
-
-
-          <form method="post" id="freeQuoteForm">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label class="free_quotes__label">Full Name</label>
-                <input type="text" name="name" class="free_quotes__input" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label class="free_quotes__label">Mobile Number</label>
-                <input type="tel" name="mobile" class="free_quotes__input" placeholder="Mobile Number" required>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label class="free_quotes__label">Location</label>
-              <input type="text" name="location" class="free_quotes__input" placeholder="City / Area" required>
-            </div>
-
-            <div class="mb-3">
-              <label class="free_quotes__label" for="bill_select">Monthly Electricity Bill</label>
-              <select name="bill" id="bill_select" class="free_quotes__input" required>
-                <option value="" selected disabled>Select Bill Range</option>
-                <option value="<1000">Below ₹1,000</option>
-                <option value="1000–2000">₹1,000 – ₹2,000</option>
-                <option value="2000–3000">₹2,000 – ₹3,000</option>
-                <option value="3000–5000">₹3,000 – ₹5,000</option>
-                <option value="5000–10000">₹5,000 – ₹10,000</option>
-                <option value=">10000">Above ₹10,000</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label class="free_quotes__label" for="property_select">Property Type</label>
-              <select name="property" id="property_select" class="free_quotes__input" required>
-                <option value="" selected disabled>Select Property Type</option>
-                <option value="Residential">Residential</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Industrial">Industrial</option>
-              </select>
-            </div>
-
-            <div class="mb-4">
-              <label class="free_quotes__label">Message (Optional)</label>
-              <textarea name="message" class="free_quotes__textarea" rows="2"
-                placeholder="Tell us more about your requirements..."></textarea>
-            </div>
-
-            <button type="submit" class="free_quotes__submit">Request Quote</button>
           </form>
 
+          </form>
+
+          <!-- <div id="quoteSuccessPopup" style="
+  display:none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 9999;
+">
+            Thank you! Your request has been received.<br>
+            Our solar expert will contact you shortly
+          </div> -->
 
 
         </div>
       </div>
-      <!-- <script>
-        document.getElementById("freeQuoteForm").addEventListener("submit", function(e) {
-          e.preventDefault();
 
-          let formData = new FormData(this);
-
-          fetch("appointmentform.php", {
-              method: "POST",
-              body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById("quoteSuccessPopup").style.display = "block";
-              document.getElementById("freeQuoteForm").reset();
-
-              setTimeout(() => {
-                document.getElementById("quoteSuccessPopup").style.display = "none";
-              }, 3000);
-            })
-            
-        });
-      </script> -->
     </div>
   </div>
+
+  <script>
+    document.getElementById("freeQuoteForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // redirect stop
+
+      let form = this;
+      let formData = new FormData(form);
+
+      fetch("appointmentform.php", { // PHP file call
+          method: "POST",
+          body: formData
+        })
+        .then(res => res.text())
+        .then(data => {
+
+          if (data.trim() === "success") {
+
+            let popup = document.getElementById("quoteSuccessPopup");
+
+            popup.style.display = "block";
+            form.reset();
+
+            setTimeout(() => {
+              popup.style.display = "none";
+            }, 3000);
+
+          } else {
+            alert("Something went wrong!");
+          }
+          console.log("Server Response:", data);
+        })
+        .catch(err => {
+          alert("Server error!");
+        });
+    });
+  </script>
+
+
+
+
 </section>
 
+
+
+
+
+<!-- <form action="appointmentform.php" method="post"></form> -->

@@ -1428,50 +1428,6 @@
   });
 </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mainSlider = new Swiper('.index_main_video_slider', {
-      loop: true,
-      speed: 1000,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      on: {
-        init: function() {
-          handleVideoPlayback(this);
-        },
-        slideChange: function() {
-          handleVideoPlayback(this);
-        }
-      }
-    });
-
-    function handleVideoPlayback(swiper) {
-      // First, pause all videos
-      const allVideos = document.querySelectorAll('.index_main_video_slider video');
-      allVideos.forEach(v => {
-        v.pause();
-        v.currentTime = 0;
-      });
-
-      // Get the video in the current active slide
-      const activeSlide = swiper.slides[swiper.activeIndex];
-      const currentVideo = activeSlide.querySelector('video');
-
-      if (currentVideo) {
-        currentVideo.play().catch(error => {
-          console.log("Autoplay blocked. User interaction might be needed.");
-        });
-
-        // CRITICAL: Next slide only when THIS video ends
-        currentVideo.onended = function() {
-          swiper.slideNext();
-        };
-      }
-    }
-  });
-</script>
 
 
 <?php include 'footer.php'; ?>

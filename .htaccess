@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Check if the requested file exists, if not, do the rewrite
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# This rule sends everything after the domain to fullblog.php as a 'slug'
+# Example: localhost/project/my-dental-blog -> fullblog.php?slug=my-dental-blog
+RewriteRule ^([^/]+)$ fullblog.php?slug=$1 [L,QSA]

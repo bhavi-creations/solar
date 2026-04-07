@@ -4596,9 +4596,25 @@ h5 {
     text-decoration: none;
     color: black;
     font-size: 16px;
-    padding: 10px 16px;
+    /* padding: 10px 16px; */
     border-radius: 25px;
     transition: all 0.3s ease;
+}
+
+@media (min-width:992px) and (max-width:1100px) {
+    .nabhas_solor_new_navbar_menu ul li a {
+
+        padding: 10px 8px;
+
+    }
+}
+
+@media (min-width:1100px)  {
+    .nabhas_solor_new_navbar_menu ul li a {
+
+        padding: 10px 16px;
+
+    }
 }
 
 /* HOVER */
@@ -4889,10 +4905,10 @@ overlay layer ni koncham transparency penchali */
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
     display: flex;
     /* Middle nundi PAINA undadaniki 'flex-start' use cheshanu */
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: center;
     /* Top nundi entha paiki undalo ikkada adjust cheyandi (e.g., 15% or 100px) */
-    padding-top: 17%; 
+    padding-top: 17%;
     z-index: 1;
     pointer-events: none;
 }
@@ -4902,7 +4918,7 @@ overlay layer ni koncham transparency penchali */
     text-align: center;
     color: #ffffff;
     padding: 20px;
-    max-width: 600px; 
+    max-width: 600px;
     margin: 0 auto;
     z-index: 2;
 }
@@ -4922,15 +4938,17 @@ overlay layer ni koncham transparency penchali */
     font-size: 1.1rem;
     opacity: 0.9;
     line-height: 1.6;
-    max-width: 450px; 
+    max-width: 450px;
     margin: 0 auto;
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .video_overlay {
-        padding-top: 15%; /* Mobile lo konchem gap ekkuva unte baguntundi */
+        padding-top: 15%;
+        /* Mobile lo konchem gap ekkuva unte baguntundi */
     }
+
     .overlay_content h2 {
         font-size: 20px;
     }
@@ -4949,3 +4967,243 @@ overlay layer ni koncham transparency penchali */
 
 
 /* contact pop up meassage  */
+
+
+
+
+
+/* blogs_main_page   */
+
+.blog_main_btn {
+    /* Initial styles for the button */
+    border-width: 0px;
+    color: black;
+    border-radius: 22px;
+    padding: 9px 22px;
+    font-weight: 800;
+    /* background-color: transparent; */
+    /* initial background color */
+
+    /* Add transition to smooth the hover effects */
+    transition: background-color 0.4s ease, color 0.4s ease, border-radius 0.4s ease;
+    margin-bottom: 14px;
+}
+
+.blog_main_btn:hover {
+    border-width: 0px;
+    color: white;
+    border-radius: 22px;
+    padding: 9px 22px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    border: 2px solid white !important;
+
+    background-color: rgb(0, 0, 31);
+    /* Dark background on hover */
+}
+
+.box-title {
+    color: #000000 !important;
+    text-decoration: none;
+    /* color: #28386a !important; */
+}
+
+/* .box-title:hover {
+  color: #072bbc !important;
+} */
+
+.blog-card-text {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.blog-card-text:hover {
+    color: #070707 !important;
+
+    font-weight: 700;
+
+}
+
+.post-desc {
+    /* color: #dbdee3; */
+    color: black;
+    /* color: #848e9f; */
+}
+
+.card_bg_div_box {
+    /* Initial styles for the card */
+    box-shadow: none;
+    /* No shadow by default */
+    /* transition: box-shadow 0.3s ease; */
+    /* background-color: rgba(10, 14, 20, 0.98); */
+    background-color: #0057b342;
+    /* Smooth transition for the box-shadow */
+    padding: 20px;
+}
+
+.card_bg_div_box:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Shadow when hovering */
+    padding: 20px;
+}
+
+.blog_box_image {
+    border-radius: 12px;
+}
+
+.background_sidebar {
+    background-color: #943483;
+}
+
+.redirect_section {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+.redirect_blog_srivice {
+    background-color: rgb(105, 199, 236);
+    color: White;
+    font-weight: 900;
+    border: none;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 3px 15px;
+
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+    .video_tag_messures {
+        width: 475px !important;
+        height: 228px !important;
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1400px) {
+
+    .video_tag_messures {
+        width: 560px !important;
+        height: 273px !important;
+    }
+}
+
+
+@media (min-width:1400px) {
+
+    .video_tag_messures {
+        width: 646px !important;
+        height: 317px !important;
+    }
+}
+
+
+
+
+/* vodeo tags code */
+.only_first {
+    padding: 0px !important;
+}
+
+.first_section {
+    margin-top: 50px;
+}
+
+
+@media (max-width:768px) {
+    .sectionForm {
+        margin-bottom: 220px !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:998px) {
+    .sectionForm {
+        margin-bottom: 250px !important;
+    }
+}
+
+@media (min-width:998px) and (max-width:1200px) {
+    .sectionForm {
+        margin-bottom: 170px !important;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .sectionForm {
+        margin-bottom: 120px !important;
+    }
+}
+
+
+.blogs_section {
+    margin-top: 200px;
+}
+
+.blog_section {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* button   */
+
+/* Smooth Hover Animation */
+.lang-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Default colors */
+.english-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.telugu-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Hover effect (only for NON-active buttons) */
+.lang-btn:not(.active):hover {
+    background: linear-gradient(95deg, #095da6 -1.58%, #0e49c9 100%);
+    color: #fff;
+}
+
+/* Active (clicked) button */
+.lang-btn.active {
+    background: linear-gradient(95deg, #095da6 -1.58%, #0e49c9 100%) !important;
+    color: #fff !important;
+}
+
+.contact-section{
+    background-color:   rgba(0, 0, 0, 0.2) !important;
+}
+
+.badge_service_name {
+  display: inline-block;
+  background: linear-gradient(135deg, #283779, #4e6cef);
+  /* premium look */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px 22px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* stylings  */
