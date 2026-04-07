@@ -271,7 +271,7 @@
     </div>
   </div>
 
-  <script>
+  <!-- <script>
     document.getElementById("freeQuoteForm").addEventListener("submit", function(e) {
       e.preventDefault(); // redirect stop
 
@@ -287,7 +287,7 @@
 
           if (data.trim() === "success") {
 
-            let popup = document.getElementById("quoteSuccessPopup");
+            let popup = document.getElementById("manikumar malladi");
 
             popup.style.display = "block";
             form.reset();
@@ -305,7 +305,7 @@
           alert("Server error!");
         });
     });
-  </script>
+  </script> -->
 
 
 
