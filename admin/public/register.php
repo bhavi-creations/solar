@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Nabhas Solar</title>
+    <title> Ask Oncologist</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
 
 
 
-                            <form class="user" action="../includes/register_handler" method="POST">
+                            <form class="user" action="../includes/register_handler.php" method="POST">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="username" name="username" required placeholder="User Name">

@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
         exit;
     } else {
         // ✅ Redirect with error message
-        header(header: "Location:blog_commets.php ?error=" . urlencode($stmt->error));
+        header("Location:blog_commets.php?error=" . urlencode($stmt->error));
         exit;
     }
     

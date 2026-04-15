@@ -10,7 +10,7 @@ $result = $conn->query("SELECT * FROM services ORDER BY id DESC");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>All Services - Admin Dashboard</title>
+    <title>Ask oncologist - Admin Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -108,7 +108,7 @@ $result = $conn->query("SELECT * FROM services ORDER BY id DESC");
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>© 2026 Nabhas Solar. All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank">Bhavi Creations</a></span>
+                    <span>© 2024 VisionDentalhospital. All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank">Bhavi Creations</a></span>
                 </div>
             </div>
         </footer>

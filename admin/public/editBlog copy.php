@@ -30,7 +30,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Vision Dental - Dashboard</title>
+    <title>Ask Oncologist - Dashboard</title>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -61,7 +61,7 @@ $conn->close();
                                     <h6 class="m-0 font-weight-bold text-success">EDIT CONTENT</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form style='color:black;' id="editblogform" action="addBlog" method="POST" enctype="multipart/form-data">
+                                    <form style='color:black;' id="editblogform" action="addBlog.php" method="POST" enctype="multipart/form-data">
                                         <!-- Title Input -->
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label text-primary">ENTER TITLE</label>
@@ -74,32 +74,36 @@ $conn->close();
                                             <label for="service" class="form-label text-primary">Select Service:</label>
                                             <select id="service" name="service" class="form-control" required>
                                                 <option value="">Select a Service</option>
-                                                <option value="Root Canal" <?php echo ($service == 'Root Canal') ? 'selected' : ''; ?>>Root Canal</option>
-                                                <option value="Teeth Braces" <?php echo ($service == 'Teeth Braces') ? 'selected' : ''; ?>>Teeth Braces</option>
-                                                <option value="Pediatric Dentist" <?php echo ($service == 'Pediatric Dentist') ? 'selected' : ''; ?>> Pediatric Dentist</option>
-                                                <option value="Paedodontist Doctors" <?php echo ($service == 'Paedodontist Doctors') ? 'selected' : ''; ?>>Paedodontist Doctors</option>
-                                                <option value="Clear Aligners" <?php echo ($service == 'Clear Aligners') ? 'selected' : ''; ?>>Clear Aligners</option>
-                                                <option value="Laminate Veneers" <?php echo ($service == 'Laminate Veneers') ? 'selected' : ''; ?>> Laminate Veneers</option>
-                                                <option value="Crown Bridge" <?php echo ($service == 'Crown Bridge') ? 'selected' : ''; ?>>Crown & Bridge</option>
-                                                <option value="Dental Implants" <?php echo ($service == 'Dental Implants') ? 'selected' : ''; ?>>Dental Implants</option>
-                                                <option value="Dentures Treatment" <?php echo ($service == 'Dentures Treatment') ? 'selected' : ''; ?>>Dentures Treatment</option>
-                                                <option value="Invisalign" <?php echo ($service == 'Invisalign') ? 'selected' : ''; ?>>Invisalign</option>
-                                                <option value="Jaw Corrective" <?php echo ($service == 'Jaw Corrective') ? 'selected' : ''; ?>>Jaw Corrective</option>
-                                                <option value="Laser Gum" <?php echo ($service == 'Laser Gum') ? 'selected' : ''; ?>>Laser & Gum</option>
-                                                <option value="Smile Designing" <?php echo ($service == 'Smile Designing') ? 'selected' : ''; ?>>Smile Designing</option>
-                                                <option value="Smile Makeover" <?php echo ($service == 'Smile Makeover') ? 'selected' : ''; ?>>Smile Makeover</option>
-                                                <option value="Teeth Alignment" <?php echo ($service == 'Teeth Alignment') ? 'selected' : ''; ?>>Teeth Alignment</option>
-                                                <option value="Tooth Extraction" <?php echo ($service == 'Tooth Extraction') ? 'selected' : ''; ?>>Tooth Extraction</option>
-                                                <option value="Teeth Cleaning" <?php echo ($service == 'Teeth Cleaning') ? 'selected' : ''; ?>>Teeth Cleaning</option>
-                                                <option value="Gum Depigment" <?php echo ($service == 'Gum Depigment') ? 'selected' : ''; ?>>Gum Depigment</option>
-                                                <option value="Teeth Whitening" <?php echo ($service == 'Teeth Whitening') ? 'selected' : ''; ?>>Teeth Whitening</option>
-                                                <option value="Laser Gum Surgery" <?php echo ($service == 'Laser Gum Surgery') ? 'selected' : ''; ?>>Laser Gum Surgery</option>
-                                                <option value="Mouth Ulcers" <?php echo ($service == 'Mouth Ulcers') ? 'selected' : ''; ?>>Mouth Ulcers</option>
-                                                <option value="Precancerous Lesion" <?php echo ($service == 'Precancerous Lesion') ? 'selected' : ''; ?>>Precancerous Lesion</option>
-                                                <option value="Laser Crown Lengthening" <?php echo ($service == 'Laser Crown Lengthening') ? 'selected' : ''; ?>>Laser Crown Lengthening</option>
-                                            
-                                            
-                                            
+                                                <option value="Bladder Cancer" <?php echo ($service == 'Bladder Cancer') ? 'selected' : ''; ?>>Bladder Cancer</option>
+                                                <option value="Brain Cancer" <?php echo ($service == 'Brain Cancer') ? 'selected' : ''; ?>>Brain Cancer</option>
+                                                <option value="Cervical Cancer" <?php echo ($service == 'Cervical Cancer') ? 'selected' : ''; ?>>Cervical Cancer</option>
+                                                <option value="Childhood Cancer" <?php echo ($service == 'Childhood Cancer') ? 'selected' : ''; ?>>Childhood Cancer</option>
+                                                <option value="Colon Cancer" <?php echo ($service == 'Colon Cancer') ? 'selected' : ''; ?>>Colon Cancer</option>
+                                                <option value="Esophageal Cancer" <?php echo ($service == 'Esophageal Cancer') ? 'selected' : ''; ?>>Esophageal Cancer</option>
+                                                <option value="Kidney Cancer" <?php echo ($service == 'Kidney Cancer') ? 'selected' : ''; ?>>Kidney Cancer</option>
+                                                <option value="Leiomyosarcoma Cancer" <?php echo ($service == 'Leiomyosarcoma Cancer') ? 'selected' : ''; ?>>Leiomyosarcoma Cancer</option>
+                                                <option value="Leukemia Cancer" <?php echo ($service == 'Leukemia Cancer') ? 'selected' : ''; ?>>Leukemia Cancer</option>
+                                                <option value="Liver Cancer" <?php echo ($service == 'Liver Cancer') ? 'selected' : ''; ?>>Liver Cancer</option>
+                                                <option value="Lung Cancer" <?php echo ($service == 'Lung Cancer') ? 'selected' : ''; ?>>Lung Cancer</option>
+                                                <option value="Lymphoma Cancer" <?php echo ($service == 'Lymphoma Cancer') ? 'selected' : ''; ?>>Lymphoma Cancer</option>
+                                                <option value="Melanoma Cancer" <?php echo ($service == 'Melanoma Cancer') ? 'selected' : ''; ?>>Melanoma Cancer</option>
+                                                <option value="Ovarian Cancer" <?php echo ($service == 'Ovarian Cancer') ? 'selected' : ''; ?>>Ovarian Cancer</option>
+                                                <option value="Pancreatic Cancer" <?php echo ($service == 'Pancreatic Cancer') ? 'selected' : ''; ?>>Pancreatic Cancer</option>
+                                                <option value="Prostate Cancer" <?php echo ($service == 'Prostate Cancer') ? 'selected' : ''; ?>>Prostate Cancer</option>
+                                                <option value="Sarcoma/Bone Cancer" <?php echo ($service == 'Sarcoma/Bone Cancer') ? 'selected' : ''; ?>>Sarcoma/Bone Cancer</option>
+                                                <option value="Stomach Cancer" <?php echo ($service == 'Stomach Cancerr') ? 'selected' : ''; ?>>Stomach Cancer</option>
+                                                <option value="Testicular Cancer" <?php echo ($service == 'Testicular Cancer') ? 'selected' : ''; ?>>Testicular Cancer</option>
+                                                <option value="Uterine Cancer" <?php echo ($service == 'Uterine Cancer') ? 'selected' : ''; ?>>Uterine Cancer</option>
+                                                <option value="Head  Neck Cancer" <?php echo ($service == 'Head Neck Cancer') ? 'selected' : ''; ?>>Head & Neck Cancer</option>
+                                                <option value="Breast Cancer" <?php echo ($service == 'Breast Cancer') ? 'selected' : ''; ?>>Breast Cancer</option>
+                                                <option value="Multiple Cancer" <?php echo ($service == 'Multiple Cancer') ? 'selected' : ''; ?>>Multiple Cancer</option>
+                                                <option value="Honors Cancer" <?php echo ($service == 'Honors Cancer') ? 'selected' : ''; ?>>Honors Cancer</option>
+
+
+
+                                                <option value="Other" <?php echo ($service == 'Other') ? 'selected' : ''; ?>>Other Blog</option>
+
++
                                             </select>
                                         </div>
 

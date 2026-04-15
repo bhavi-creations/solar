@@ -1,6 +1,20 @@
+<?php
+// Ensure session is started
+if (session_status() === PHP_SESSION_NONE) {
+    // session_start();
+}
+
+// Safely get username
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
+?>
+
+
+
+
+
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-    <!-- Sidebar Toggle (Topbar) -->
+    <!-- Sidebar Toggle -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>
@@ -10,36 +24,37 @@
 
         <div class="topbar-divider d-none d-sm-block"></div>
 
-        <!-- Nav Item - User Information -->
+        <!-- User Info -->
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                <span class="mr-2 d-lg-inline text-gray-600 small" style="font-size: 20px; text-transform: capitalize;">
-                    <?php 
-                    // Display username if set, otherwise fallback to 'Admin'
-                    echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Admin'; 
-                    ?>
+                <span class="mr-2 d-lg-inline text-gray-600 small"
+                    style="font-size:20px; text-transform:capitalize;">
+                    <?= htmlspecialchars($username); ?>
                 </span>
 
                 <img class="img-profile rounded-circle"
-                     src="img/undraw_profile.svg">
+                    src="img/undraw_profile.svg"
+                    alt="User">
             </a>
 
-            <!-- Dropdown - User Information -->
+            <!-- Dropdown -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                 aria-labelledby="userDropdown">
+                aria-labelledby="userDropdown">
+
                 <a class="dropdown-item" href="profile.php">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
-                </a>  
+                </a>
+
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                 </a>
+
             </div>
         </li>
 
     </ul>
-
 </nav>

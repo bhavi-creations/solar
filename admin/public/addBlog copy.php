@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle file uploads for title image and main image
     $title_image_path = '';
     if (!empty($_FILES['title_image']['name'])) {
-        $title_image_directory = __DIR__ . "./../uploads/photos/";
+        $title_image_directory = __DIR__ . "/../uploads/photos/";
         $title_image_name = generateUniqueFileName($_FILES['title_image']['name']);
         $title_image_path = $title_image_name;
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $main_image_path = '';
     if (!empty($_FILES['main_image']['name'])) {
-        $main_image_directory = __DIR__ . "./../uploads/photos/";
+        $main_image_directory = __DIR__ . "/../uploads/photos/";
         $main_image_name = generateUniqueFileName($_FILES['main_image']['name']);
         $main_image_path = $main_image_name;
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle video upload
     $video_path = '';
     if (!empty($_FILES['video']['name'])) {
-        $video_directory = __DIR__ . "./../uploads/videos/";  // Adjust the upload directory path for videos
+        $video_directory = __DIR__ . "/../uploads/videos/";  // Adjust the upload directory path for videos
         $video_name = generateUniqueFileName($_FILES['video']['name']);
         $video_path = $video_name;  // Store only the filename
 

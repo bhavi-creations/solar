@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nabhas Solar - Dashboard</title>
+    <title>Ask Oncologist - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -74,7 +74,7 @@
 
 
 
-                    <form class="user" action="profileUpdate" method="POST">
+                    <form class="user" action="profileUpdate.php" method="POST">
                         <div class="form-group row">
                             <div class="col-md-6 mb-3 ">
                                 <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="User Name" value=<?php echo $user['first_name'];  ?>>
@@ -113,7 +113,7 @@
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <div class="footer-widget__copyright">
-                            <p class="mini_text" style="color:black"> ©2026 Nabhas Solar . All Rights Reserved. Designed &
+                            <p class="mini_text" style="color:black"> ©2024 Ask Oncologist . All Rights Reserved. Designed &
                                 Developed by <a href="https://bhavicreations.com/" target="_blank" style="text-decoration: none;color:black">Bhavi
                                     Creations</a></p>
                         </div>

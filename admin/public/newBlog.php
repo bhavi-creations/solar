@@ -9,10 +9,11 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
 
 <head>
     <meta charset="utf-8">
-    <title>Nabhas Solar - Dashboard</title>
+    <title>Apple dental hospital - Dashboard</title>
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
 </head>
 
@@ -38,21 +39,14 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
                                 <hr>
 
                                 <div class="mb-3">
-                                    <label>Internal Title (For URL Generation)</label>
-                                    <input type="text" class="form-control" id="blog_title" required>
-                                    <small class="text-muted">Ikada type chesedhi URL slug ga maruthundi.</small>
+                                    <label>English Title</label>
+                                    <input type="text" class="form-control" name="title" id="blog_title" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="text-danger"><b>Custom URL Slug</b></label>
-                                    <input type="text" class="form-control" name="slug" id="blog_slug" placeholder="e.g. best-solar-panels" required>
-                                    <small class="text-muted">Space badalu dash (-) use cheyyandi. Example: my-new-blog</small>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="font-weight-bold">English Main Heading</label>
-                                    <input type="text" class="form-control" name="english_heading" placeholder="Blog paina kanipinche heading ikada rayandi" required>
-                                    <small class="text-info">Idi kevalam content heading matrame, URL change avvadhu.</small>
+                                    <label class="text-danger">URL Slug (e.g., best-dental-hospital-in-rajahmundry)</label>
+                                    <input type="text" class="form-control" name="slug" id="blog_slug" placeholder="custom-url-path" required>
+                                    <small class="text-muted">Idi URL lo display avtundi. Spaces badulu hyphens (-) use cheyali.</small>
                                 </div>
 
                                 <div class="mb-3">
@@ -101,6 +95,21 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
                                     <input type="hidden" name="telugu_full_content" id="teluguFullData">
                                 </div>
 
+                                <h4 class="text-primary mt-5">SEO Tags</h4>
+                                <hr>
+
+                                <div class="mb-3">
+                                    <label>Hashtags (Comma separated)</label>
+                                    <input type="text" class="form-control" name="hashtags"
+                                        placeholder="#dental,#rootcanal,#implants,#smile,#clinic">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label>Key Points (Comma separated)</label>
+                                    <input type="text" class="form-control" name="keypoints"
+                                        placeholder="Painless treatment, Advanced equipment, Expert doctors, Affordable cost">
+                                </div>
+
                                 <h4 class="text-primary mt-5">Images</h4>
                                 <hr>
 
@@ -124,7 +133,6 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
 
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -144,19 +152,17 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
             theme: "snow"
         });
 
-        // Auto-generate slug ONLY from 'blog_title' field
+        // Automatic Slug Generator: Title type chestunte slug automatically fill avtundi
         document.getElementById('blog_title').addEventListener('input', function() {
             let title = this.value;
             let slug = title.toLowerCase()
-                .replace(/[^a-z0-9\s-]/g, '') // remove special chars
-                .trim()
-                .replace(/\s+/g, '-') // replace spaces with -
-                .replace(/-+/g, '-'); // remove double dashes
+                .replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                .replace(/-+/g, '-'); // collapse dashes
             document.getElementById('blog_slug').value = slug;
         });
 
         document.querySelector("#addblogform").onsubmit = function() {
-            // Populate hidden inputs with Quill content
             document.querySelector("#mainContentData").value = quillMain.root.innerHTML;
             document.querySelector("#fullContentData").value = quillFull.root.innerHTML;
             document.querySelector("#teluguMainData").value = tqMain.root.innerHTML;
@@ -169,36 +175,54 @@ $services_result = $conn->query("SELECT id, service_name FROM services ORDER BY 
 </html>
 
 
-
-
-
-<!-- <div class="mb-3">
-                                            <label class="form-label text-primary">Select Service</label>
-                                            <select id="service" name="service" class="form-control" required>
+<!-- <select name="service" class="form-control" required>
                                                 <option value="">Select a Service</option>
                                                 <option value="Root Canal">Root Canal</option>
-                                                <option value="Teeth Braces">Teeth Braces</option>
-                                                <option value="Pediatric Dentist">Pediatric Dentist</option>
-                                                <option value="Paedodontist Doctors">Paedodontist Doctors </option>
+                                                <option value="Dental Braces">Dental Braces</option>
                                                 <option value="Clear Aligners">Clear Aligners</option>
-                                                <option value="Laminate Veneers">Laminate Veneers</option>
-                                                <option value="Crown Bridge">Crown & Bridge</option>
                                                 <option value="Dental Implants">Dental Implants</option>
-                                                <option value="Dentures Treatment">Dentures</option>
-                                                <option value="Invisalign">Invisalign </option>
-                                                <option value="Jaw Corrective">Jaw Corrective</option>
-                                                <option value="Laser Gum">Laser & Gum</option>
-                                                <option value="Smile Designing">Smile Designing</option>
-                                                <option value="Smile Makeover">Smile Makeover</option>
-                                                <option value="Teeth Alignment">Teeth Alignment</option>
+                                                <option value="Crown Bridge">Crown & Bridge</option>
+                                                <option value="Teeth Filling">Teeth Filling</option>
+                                                <option value="Dentures">Dentures</option>
+                                                <option value="Teeth Scaling">Teeth Scaling</option>
                                                 <option value="Tooth Extraction">Tooth Extraction</option>
-                                                <option value="Tooth Cleaning">Teeth Cleaning</option>
-                                                <option value="Gum Depigment">Gum Depigment</option>
+                                                <option value="Teeth Cleaning">Teeth Cleaning</option>
                                                 <option value="Teeth Whitening">Teeth Whitening</option>
-                                                <option value="Laser Gum Surgery">Laser Gum Surgery </option>
-                                                <option value="Mouth Ulcers">Mouth Ulcers </option>
-                                                <option value="Precancerous Lesion">Precancerous Lesion</option>
-                                                <option value="Laser Crown Lengthening">Laser Crown Lengthening</option>
+                                                <option value="Smile Makeover">Smile Makeover</option>
+                                                <option value="Full Mouth Restoration">Full Mouth Restoration</option>
+                                            </select> -->
 
+
+
+<!-- <div class="filter-section mb-3">
+                                            <label for="service" class="form-label text-primary">Select Service:</label>
+                                            <select id="service" name="service" class="form-control" required>
+                                                <option value="">Select a Service</option>
+                                                <option value="Bladder Cancer">Bladder Cancer</option>
+                                                <option value="Brain Cancer">Brain Cancer</option>
+                                                <option value="Cervical Cancer">Cervical Cancer</option>
+                                                <option value="Childhood Cancer">Childhood Cancer</option>
+                                                <option value="Colon Cancer">Colon Cancer</option>
+                                                <option value="Esophageal Cancer">Esophageal Cancer</option>
+                                                <option value="Kidney Cancer">Kidney Cancer</option>
+                                                <option value="Leiomyosarcoma Cancer">Leiomyosarcoma Cancer</option>
+                                                <option value="Leukemia Cancer">Leukemia Cancer</option>
+                                                <option value="Liver Cancer">Liver Cancer</option>
+                                                <option value="Lung Cance">Lung Cancer</option>
+                                                <option value="Lymphoma Cancer">Lymphoma Cancer</option>
+                                                <option value="Melanoma Cancer">Melanoma Cancer</option>
+                                                <option value="Ovarian Cancer">Ovarian Cancer</option>
+                                                <option value="Pancreatic Cancer">Pancreatic Cancer</option>
+                                                <option value="Prostate Cancer">Prostate Cancer</option>
+                                                <option value="Sarcoma/Bone Cancer">Sarcoma/Bone Cancer</option>
+                                                <option value="Stomach Cancer">Stomach Cancer</option>
+                                                <option value="Testicular Cancer">Testicular Cancer</option>
+                                                <option value="Uterine Cancer">Uterine Cancer</option>
+                                                <option value="Head Neck Cancer">Head & Neck Cancer</option>
+                                                <option value="Breast Cancer">Breast Cancer</option>
+                                                <option value="Breast Cancer">Honors Cancer</option>
+
+
+                                                <option value="Other">Other Services</option>
                                             </select>
                                         </div> -->

@@ -119,7 +119,7 @@ $all_services = $conn->query("SELECT * FROM services ORDER BY id DESC");
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
             <div class="container my-auto text-center">
-                <span>© 2026 Nabhas Solar. All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank">Bhavi Creations</a></span>
+                <span>© 2024 VisionDentalhospital. All Rights Reserved. Designed & Developed by <a href="https://bhavicreations.com/" target="_blank">Bhavi Creations</a></span>
             </div>
         </footer>
 

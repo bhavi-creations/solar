@@ -1,66 +1,135 @@
 <?php
-include './db.connection/db_connection.php'; // Include your database connection file
+include './db.connection/db_connection.php';
 
-// Retrieve service filter from GET request
+// Service filter
 $service = isset($_GET['service']) ? $_GET['service'] : '';
 
-// --- SQL QUERY UPDATED TO INCLUDE english_heading ---
-$sql = "SELECT id, slug, title, english_heading, main_content, main_image, created_at FROM blogs";
+// Query
+$sql = "SELECT id, slug, title, main_content, main_image, created_at FROM blogs";
 if (!empty($service)) {
   $sql .= " WHERE service = ?";
 }
 $sql .= " ORDER BY created_at DESC";
 
-// Initialize statement
 $stmt = $conn->prepare($sql);
 
-// Bind parameters if service is set
 if (!empty($service)) {
   $stmt->bind_param("s", $service);
 }
 
-// Execute the statement
 $stmt->execute();
-
-// Get the result
 $result = $stmt->get_result();
 ?>
 
-
 <?php include 'navbar.php'; ?>
 
+<style>
+  .post-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-<main>
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
+  .post-desc {
+    flex-grow: 1;
+  }
+
+  .blog-date {
+    margin-top: 10px;
+    font-size: 13px;
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .blog_section{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px ;
+  }
+</style>
+
+<main class="blog_section_stylings" >
+  <div class="blog_section">
+    <h1>Blogs</h1>
+  </div>
+  <!-- <div class="container">
+    
+    <div class="filter_buttons redirect_section mt-4">
+      <a href="blogs.php?service="><button class="redirect_blog_srivice">All</button></a>
+      <a href="blogs.php?service=Root Canal"><button class="redirect_blog_srivice">Root Canal</button></a>
+      <a href="blogs.php?service=Dental Braces"><button class="redirect_blog_srivice">Dental Braces</button></a>
+      <a href="blogs.php?service=Clear Aligners"><button class="redirect_blog_srivice">Clear Aligners</button></a>
+      <a href="blogs.php?service=Dental Implant"><button class="redirect_blog_srivice">Dental Implant</button></a>
+      <a href="blogs.php?service=Crown Bridge"><button class="redirect_blog_srivice">Crown & Bridge</button></a>
+      <a href="blogs.php?service=Teeth Filling"><button class="redirect_blog_srivice">Teeth Filling</button></a>
+      <a href="blogs.php?service=Dentures"><button class="redirect_blog_srivice">Dentures</button></a>
+      <a href="blogs.php?service=Teeth Scaling"><button class="redirect_blog_srivice">Teeth Scaling</button></a>
+      <a href="blogs.php?service=Tooth Extraction"><button class="redirect_blog_srivice">Tooth Extraction</button></a>
+      <a href="blogs.php?service=Teeth Cleaning"><button class="redirect_blog_srivice">Teeth Cleaning</button></a>
+      <a href="blogs.php?service=Teeth Whitening"><button class="redirect_blog_srivice">Teeth Whitening</button></a>
+      <a href="blogs.php?service=Smile Makeover"><button class="redirect_blog_srivice">Smile Makeover</button></a>
+      <a href="blogs.php?service=Full Mouth Restoration"><button class="redirect_blog_srivice">Full Mouth Restoration</button></a>
+    </div>
+  </div> -->
 
   <div class="container blog-sidebar-list" style="padding-top: 20px; padding-bottom: 20px;">
     <div class="row">
       <div class="col-lg-12">
         <div class="grid row">
+
           <?php
           if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-              $image_path = !empty($row['main_image']) ? "admin/uploads/photos/{$row['main_image']}" : "default_image.png";
 
-              // --- SEO FRIENDLY LINK LOGIC ---
-              $blog_link = !empty($row['slug']) ? $row['slug'] : "?id=" . $row['id'];
+              // ✅ Image path
+              $image_path = !empty($row['main_image'])
+                ? "admin/uploads/photos/" . htmlspecialchars($row['main_image'])
+                : "default_image.png";
 
-              // --- HEADING LOGIC ---
-              // english_heading unte adi, lekapothe title chupisthundi
-              $display_title = !empty($row['english_heading']) ? $row['english_heading'] : $row['title'];
+              // ✅ SEO URL (slug)
+              $blog_link_val = !empty($row['slug']) ? urlencode($row['slug']) : $row['id'];
+              $final_url = "fullblog.php?id=" . $blog_link_val;
+
+              // ✅ Date format
+              $formatted_date = date("d M Y, h:i A", strtotime($row['created_at']));
+
+              // ✅ Safe preview (Quill content → text)
+              $preview = substr(strip_tags(html_entity_decode($row['main_content'])), 0, 100);
 
               echo "
               <div class='grid-item col-sm-12 col-lg-4 mb-5'>
                   <div class='post-box card_bg_div_box'>
                       <figure>
-                          <a href='{$blog_link}'>
-                              <img src='{$image_path}' alt='Blog Image' class='img-fluid blog_box_image' style='height:250px; width:100%; object-fit:cover;'>
+                          <a href='{$final_url}'>
+                              <img src='{$image_path}' alt='Blog Image' class='img-fluid blog_box_image'>
                           </a>
                       </figure>
+
                       <div class='box-content'>
-                          <h5 class='box-title'><a class='box-title' href='{$blog_link}'>" . htmlspecialchars($display_title) . "</a></h5>
-                          <p class='post-desc mt-5' style='text-align: justify;'>" . substr(strip_tags($row['main_content']), 0, 90) . "...</p>
-                          <a href='{$blog_link}'><button class='blog_main_btn'>Read More..</button></a>
+                          <h5 class='box-title'>
+                              <a class='box-title' href='{$final_url}'>" . htmlspecialchars($row['title']) . "</a>
+                          </h5>
+
+                          <p class='post-desc mt-3' style='text-align: justify;'>
+                              {$preview}...
+                          </p>
+
+                          <a href='{$final_url}'>
+                              <button class='blog_main_btn'>Read More..</button>
+                          </a>
+
+                          <!-- ✅ FIXED DATE ICON -->
+                          <p class='blog-date'>🕒 {$formatted_date}</p>
                       </div>
                   </div>
               </div>";
@@ -69,24 +138,14 @@ $result = $stmt->get_result();
             echo "<p>No blog posts found.</p>";
           }
           ?>
+
         </div>
       </div>
     </div>
   </div>
 </main>
+
 <?php include('./footer.php'); ?>
-
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
 
 <?php
 $stmt->close();
